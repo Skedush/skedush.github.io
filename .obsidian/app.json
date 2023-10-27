@@ -4,5 +4,6 @@
     "public/",
     "quartz/",
     "docs/"
-  ]
+  ],
+  "showInlineTitle": true
 }
