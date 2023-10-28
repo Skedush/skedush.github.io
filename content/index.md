@@ -1,5 +1,5 @@
 ---
-title: Welcome to Quartz 4
+title: Welcome
 ---
 
 This is a blank Quartz installation.
