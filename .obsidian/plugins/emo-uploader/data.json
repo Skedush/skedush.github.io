@@ -1,0 +1,56 @@
+{
+  "choice": "Github",
+  "github_parms": {
+    "required": {
+      "owner": "Skedush",
+      "repo": "image-raw",
+      "branch": "main",
+      "token": "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",
+      "message": "from emo-uploader·Github"
+    },
+    "path": "",
+    "random": true,
+    "cdn": "raw"
+  },
+  "imgur_parms": {
+    "required": {
+      "emoid": "4547d4aee97ce8f"
+    },
+    "clientid": "",
+    "anonymous": true
+  },
+  "cloudinary_parms": {
+    "required": {
+      "name": "",
+      "present": ""
+    },
+    "folder": ""
+  },
+  "smms_parms": {
+    "required": {
+      "token": ""
+    }
+  },
+  "imgurl_parms": {
+    "required": {
+      "uid": "",
+      "token": ""
+    }
+  },
+  "imgbb_parms": {
+    "required": {
+      "key": ""
+    }
+  },
+  "catbox_parms": {
+    "required": {
+      "userhash": ""
+    }
+  },
+  "chevereto_parms": {
+    "required": {
+      "domain": "",
+      "token": ""
+    }
+  }
+}
