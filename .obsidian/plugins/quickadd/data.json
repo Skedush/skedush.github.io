@@ -1,45 +1,40 @@
 {
   "choices": [
     {
-      "id": "deac380e-32cf-44af-ac07-0d952f25f33e",
-      "name": "闪念",
-      "type": "Capture",
+      "id": "8a58d9b5-3ab1-4a0b-ac29-80e572f71a89",
+      "name": "2023日记",
+      "type": "Template",
       "command": false,
+      "templatePath": "content/assets/template/日记模板.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{date}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "content/生而为人我深谢/2023"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
       "appendLink": false,
-      "captureTo": "",
-      "captureToActiveFile": false,
-      "createFileIfItDoesntExist": {
-        "enabled": false,
-        "createWithTemplate": false,
-        "template": ""
-      },
-      "format": {
-        "enabled": false,
-        "format": ""
-      },
-      "insertAfter": {
-        "enabled": false,
-        "after": "",
-        "insertAtEnd": false,
-        "considerSubsections": false,
-        "createIfNotFound": false,
-        "createIfNotFoundLocation": "top"
-      },
-      "prepend": false,
-      "task": false,
       "openFileInNewTab": {
         "enabled": false,
         "direction": "vertical",
         "focus": true
       },
-      "openFile": false,
-      "openFileInMode": "default"
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Increment the file name",
+      "setFileExistsBehavior": false
     }
   ],
   "macros": [],
   "inputPrompt": "single-line",
   "devMode": false,
-  "templateFolderPath": "",
+  "templateFolderPath": "content/assets/template",
   "announceUpdates": true,
   "version": "1.4.0",
   "disableOnlineFeatures": true,
