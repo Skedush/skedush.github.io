@@ -8,7 +8,7 @@
       "templatePath": "content/assets/template/日记模板.md",
       "fileNameFormat": {
         "enabled": true,
-        "format": "{{date}}"
+        "format": "{{DATE:}}"
       },
       "folder": {
         "enabled": true,
