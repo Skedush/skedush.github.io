@@ -4,8 +4,8 @@
       "id": "8a58d9b5-3ab1-4a0b-ac29-80e572f71a89",
       "name": "2023日记",
       "type": "Template",
-      "command": true,
-      "templatePath": "/content/生而为人我深谢/template/日记模板.md",
+      "command": false,
+      "templatePath": "template/日记模板.md",
       "fileNameFormat": {
         "enabled": true,
         "format": "{{DATE:}}"
