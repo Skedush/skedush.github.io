@@ -3,5 +3,8 @@
   "theme": "obsidian",
   "cssTheme": "Minimal",
   "translucency": false,
-  "nativeMenus": true
+  "nativeMenus": true,
+  "enabledCssSnippets": [
+    "dailyNote"
+  ]
 }
