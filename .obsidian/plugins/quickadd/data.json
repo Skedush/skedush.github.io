@@ -1,42 +1,12 @@
 {
   "choices": [
     {
-      "id": "8a58d9b5-3ab1-4a0b-ac29-80e572f71a89",
-      "name": "2023日记",
-      "type": "Template",
-      "command": false,
-      "templatePath": "template/日记模板.md",
-      "fileNameFormat": {
-        "enabled": true,
-        "format": "{{DATE:}}"
-      },
-      "folder": {
-        "enabled": true,
-        "folders": [
-          "content/生而为人我深谢/2023"
-        ],
-        "chooseWhenCreatingNote": false,
-        "createInSameFolderAsActiveFile": false,
-        "chooseFromSubfolders": false
-      },
-      "appendLink": false,
-      "openFileInNewTab": {
-        "enabled": false,
-        "direction": "vertical",
-        "focus": true
-      },
-      "openFile": true,
-      "openFileInMode": "default",
-      "fileExistsMode": "Increment the file name",
-      "setFileExistsBehavior": false
-    },
-    {
       "id": "4120e2c7-3650-47f6-9187-f26e76a619a0",
-      "name": "捕捉",
+      "name": "工作闪念",
       "type": "Capture",
       "command": false,
       "appendLink": false,
-      "captureTo": "content/生而为人我深谢/Capture.md",
+      "captureTo": "content/生存/工作闪念.md",
       "captureToActiveFile": false,
       "createFileIfItDoesntExist": {
         "enabled": false,
@@ -45,7 +15,7 @@
       },
       "format": {
         "enabled": true,
-        "format": "\\n\n{{DATE:YYYY-MM-DD HH:mm dddd}}\n{{value}}"
+        "format": "# {{DATE:YYYY-MM-DD}}\n{{DATE:HH:mm}}\n#{{DATE:dddd}}\n#地点\n{{value}}\n\\n"
       },
       "insertAfter": {
         "enabled": false,
@@ -67,7 +37,7 @@
     },
     {
       "id": "e8ab26cc-4b8c-4e9c-bf0c-b7382f080de4",
-      "name": "日记测试",
+      "name": "日记",
       "type": "Template",
       "command": false,
       "templatePath": "template/日记模板.md",
@@ -94,6 +64,41 @@
       "openFileInMode": "default",
       "fileExistsMode": "Append to the top of the file",
       "setFileExistsBehavior": true
+    },
+    {
+      "id": "2aca7375-ec62-4380-a7c3-f9cd1abe5245",
+      "name": "日常闪念",
+      "type": "Capture",
+      "command": false,
+      "appendLink": false,
+      "captureTo": "content/生活/日常闪念.md",
+      "captureToActiveFile": false,
+      "createFileIfItDoesntExist": {
+        "enabled": false,
+        "createWithTemplate": false,
+        "template": ""
+      },
+      "format": {
+        "enabled": true,
+        "format": "# {{DATE:YYYY-MM-DD}}\n{{DATE:HH:mm}}\n#{{DATE:dddd}}\n#地点\n{{value}}\n\\n"
+      },
+      "insertAfter": {
+        "enabled": false,
+        "after": "",
+        "insertAtEnd": false,
+        "considerSubsections": false,
+        "createIfNotFound": false,
+        "createIfNotFoundLocation": "top"
+      },
+      "prepend": false,
+      "task": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default"
     }
   ],
   "macros": [],
