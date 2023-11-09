@@ -1,7 +1,10 @@
 - 2022年投入13500元=1850u
-- blur空投2012usdt
+- blur空投2012 usdt
 - apt空投300apt兑换2100+u
 - 合约亏损2000u
-- bilibili nft 1000u
-- mmmm nft 亏损
-- 其他nft亏损 1000u
+- bilibili nft 消费900u
+- mmmm nft 亏损600u
+- kpr nft 亏损500u
+- dudu nft亏损80u
+- 其他nft 亏损80u
+- 剩余1100u 交易机器人网格做到-> 1330
