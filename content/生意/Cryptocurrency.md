@@ -1,0 +1,7 @@
+- 2022年投入13500元=1850u
+- blur空投2012usdt
+- apt空投300apt兑换2100+u
+- 合约亏损2000u
+- bilibili nft 1000u
+- mmmm nft 亏损
+- 其他nft亏损 1000u
