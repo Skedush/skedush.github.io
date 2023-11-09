@@ -1,8 +1,10 @@
 ---
-title: 现象或造化
+title: 因果现象造化
 ---
 夜曲-周杰伦.mp3
 ![[周杰伦 - 夜曲.mp3]]
+
+---
 - 关上你的嘴，唯一的恩惠！
 ---
 - 此刻的欢愉就要此刻回应！
@@ -31,4 +33,4 @@ title: 现象或造化
 ---
 - 失去一个东西的最好办法，就是留住它。
 
-home🌐:[skedush.xyz](https://skedush.xyz)
+Home🌐:[skedush.xyz](https://skedush.xyz)
