@@ -4,7 +4,6 @@ title: 因果现象造化纯粹
 > 夜曲-周杰伦.mp3
 ![[周杰伦 - 夜曲.mp3]]
 
-<iframe src="https://player.bilibili.com/player.html?aid=717932898&bvid=BV1LQ4y1y7Q7&cid=405042081&p=1" scrolling="no" width="100%" height="500px" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 ---
 - 关掉你的嘴，唯一的恩惠！
 ---
