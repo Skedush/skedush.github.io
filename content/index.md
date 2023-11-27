@@ -34,5 +34,11 @@ title: 因果现象造化纯粹
 - 失去一个东西的最好办法，就是留住它。
 ---
 - 冬天的到来只需要一个晚上
+---
+- Ohana means family, and family means no one gets left behind or forgotten.
+	Ohana就是家的意思，家意味着没有人会被抛弃，也不会被遗忘。
+	——《星际宝贝》 Lilo & Stitch
+---
+
 
 Home🌐:[skedush.xyz](https://skedush.xyz)
