@@ -79,3 +79,17 @@ git stash
 ```
 git stash pop 或者 git stash apply（了解这两个的不同）
 ```
+
+# 远程分支删除后更新本地分支
+1. 更新本地仓库信息
+```bash
+git fetch --prune
+```
+2. 查看本地分支
+```bash
+git branch -vv
+```
+3. 删除无效的本地远程分支引用
+```bash
+git branch -d -r <remote>/<branch>
+```
