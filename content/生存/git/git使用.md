@@ -64,7 +64,7 @@ $ git revert HEAD
 git cherry-pick <commitHash>
 ```
 
-更多相关知识看[这里](https://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html)
+更多相关知识看[git cherry-pick 教程 - 阮一峰的网络日志](https://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html)
 
 ### stash
 
