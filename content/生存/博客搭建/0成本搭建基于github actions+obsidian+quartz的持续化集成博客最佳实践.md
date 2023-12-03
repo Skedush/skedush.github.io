@@ -10,7 +10,7 @@
 	![[Pasted image 20231203221337.png]]
 	![[Pasted image 20231203221447.png]]
 	
-1. 拉取quartz代码
+2. 拉取quartz代码
 	```bash
 	git clone https://github.com/jackyzha0/quartz.git
 	cd quartz
@@ -24,7 +24,7 @@
 	![[Pasted image 20231203220506.png]]
 	![[Pasted image 20231203220550.png]]
 4. 编写git actions持续化集成的workflow文件。
-	- 在根目录下的.github/workflows中创建deploy.yml文件，内容如下：
+	- 在根目录下的.github/workflows中创建[deploy.yml](https://raw.githubusercontent.com/Skedush/skedush.github.io/main/.github/workflows/deploy.yml)文件，内容如下：
 	```yaml
 	name: Deploy Quartz site to GitHub Pages
 	
@@ -72,12 +72,39 @@
 	        id: deployment
 	        uses: actions/deploy-pages@v2
 	```
-1. 上传到自己的创建的仓库中。
+5. 上传到自己的创建的仓库中。
 	```
 	git remote add origin https://github.com/[用户名]/[仓库名].git
 	git branch -M main
 	git push -u origin main
 	```
 	成功后再github的项目中的ancions里面应该就能看到
-1. 使用obsidian打开项目并安装同步等插件
+	![[Pasted image 20231203222304.png]]
+	集成完成后打开https://skedush.github.io/\[仓库名\]就能看到自己部署的博客啦！
+	
+	
+6. 使用obsidian打开项目并安装同步等插件
+	1. 选择本地仓库文件夹打开
+		![[Pasted image 20231203223011.png]]
+	2. 安装git插件工具
+		![[Pasted image 20231203223232.png]]
+		![[Pasted image 20231203223308.png]]
+		![[Pasted image 20231203223330.png]]
+		![[Pasted image 20231203223344.png]]
+		![[Pasted image 20231203223409.png]]
+		![[Pasted image 20231203223421.png]]
+		
+	3. 配置插件
+		修改文件后无操作5分钟会自动上传到github
+		![[Pasted image 20231203223534.png]]
+		配置github账号使用的的用户名与邮箱
+		![[Pasted image 20231203223723.png]]
+		配置git插件的快捷键
+		![[Pasted image 20231203223924.png]]
+		![[Pasted image 20231203224014.png]]
+		现在可以根据快捷键手动上传了。
+		> 不同的电脑环境可能需要配置git账号的用户名密码。或者使用token的形式都行。这些自己去找资料了，是git相关的知识了。
+		
+	
+	
 
