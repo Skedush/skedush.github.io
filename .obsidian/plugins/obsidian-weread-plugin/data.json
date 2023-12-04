@@ -14,7 +14,7 @@
     },
     {
       "name": "wr_skey",
-      "value": "TntxJC0c"
+      "value": "E1BcokRQ"
     },
     {
       "name": "wr_pf",
@@ -42,11 +42,11 @@
     }
   ],
   "noteLocation": "content/生活/读书笔记",
-  "dailyNotesLocation": "/",
+  "dailyNotesLocation": "content/生而为人我深谢/2023",
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
-  "dailyNotesFormat": "YYYY-MM-DD",
-  "lastCookieTime": 1701616437563,
+  "dailyNotesFormat": "YYYY-MM",
+  "lastCookieTime": 1701663434009,
   "isCookieValid": true,
   "user": "Liii",
   "userVid": "385152191",

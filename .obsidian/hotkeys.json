@@ -42,5 +42,13 @@
       "key": "G"
     }
   ],
-  "graph:open": []
+  "graph:open": [],
+  "obsidian-weread-plugin:sync-weread-notes-command": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "W"
+    }
+  ]
 }
