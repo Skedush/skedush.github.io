@@ -14,9 +14,12 @@ const config: QuartzConfig = {
     defaultDateType: "created",
     theme: {
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "DM Serif Text",
+        body: "Bricolage Grotesque",
+        code: "JetBrains Mono",
+        // header: "Schibsted Grotesk",
+        // body: "Source Sans Pro",
+        // code: "IBM Plex Mono",
       },
       colors: {
         lightMode: {
@@ -65,7 +68,7 @@ const config: QuartzConfig = {
       Plugin.TagPage(),
       Plugin.ContentIndex({
         enableSiteMap: true,
-        enableRSS: false,
+        enableRSS: true,
       }),
       Plugin.Assets(),
       Plugin.Static(),
