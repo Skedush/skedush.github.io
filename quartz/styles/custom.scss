@@ -1,3 +1,7 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+.meta,
+.content-meta {
+  font-family: biro_script_standardRgus, var(--bodyFont);
+}
