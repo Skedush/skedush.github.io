@@ -28,7 +28,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.DesktopOnly(
       Component.RecentNotes({
         title: "Recent Writing",
-        limit: 3,
+        limit: 5,
         filter: (f) => !f.slug!.startsWith("生而为人我深谢/") && !f.frontmatter?.noindex,
       }),
     ),

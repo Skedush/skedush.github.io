@@ -8,6 +8,8 @@
     list-style: none;
     margin-top: 1rem;
     padding-left: 0;
+    max-height: 250;
+    overflow-y: scroll;
 
     & > li {
       margin: 1rem 0;
