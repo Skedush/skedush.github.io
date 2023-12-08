@@ -5,10 +5,6 @@ title: 因果现象造化纯粹认知
 > 夜曲-周杰伦.mp3
 ![[周杰伦 - 夜曲.mp3]]
 
-> [!info] Title 
-> 
-> This is a callout!
-
 - 阿狸说得对，谁赞成谁反对，阿狸不纯粹。**conocimiento**
 ---
 - 关掉你的嘴，唯一的恩惠！
