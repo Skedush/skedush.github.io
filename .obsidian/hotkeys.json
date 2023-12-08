@@ -50,5 +50,22 @@
       ],
       "key": "W"
     }
+  ],
+  "table-editor-obsidian:table-control-bar": [],
+  "audio-recorder:start": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "S"
+    }
+  ],
+  "audio-recorder:stop": [
+    {
+      "modifiers": [
+        "Ctrl"
+      ],
+      "key": "E"
+    }
   ]
 }
