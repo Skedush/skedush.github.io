@@ -4,7 +4,7 @@
 
 YApi 是去哪儿网开源的一个`高效`、`易用`、`功能强大`的 API 管理平台，它拥有接口管理，接口调试，接口测试，Mock 等等一系列特性，并且支持导入和自动同步`swagger`文档，可以直接将现有的所有项目`swagger`文档无缝迁移到 YApi 上统一管理，真的是不讲武德！
 
-官方已经部署了一套公有服务进行演示，直接访问[https://yapi.baidu.com](https://yapi.baidu.com/)即可快速体验。
+官方已经部署了一套公有服务进行演示，直接访问[GitHub - YMFE/yapi: YApi 是一个可本地部署的、打通前后端及QA的、可视化的接口管理平台](https://github.com/ymfe/yapi)即可快速体验。
 
 ## 部署
 
