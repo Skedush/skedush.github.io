@@ -52,20 +52,22 @@
     }
   ],
   "table-editor-obsidian:table-control-bar": [],
-  "audio-recorder:start": [
-    {
-      "modifiers": [
-        "Ctrl"
-      ],
-      "key": "S"
-    }
-  ],
   "audio-recorder:stop": [
     {
       "modifiers": [
         "Ctrl"
       ],
       "key": "E"
+    }
+  ],
+  "obsidian-excalidraw-plugin:insert-link-to-element": [],
+  "quickadd:runQuickAdd": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "R"
     }
   ]
 }
