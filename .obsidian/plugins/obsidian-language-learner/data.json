@@ -5,7 +5,7 @@
   "self_port": 3002,
   "native": "zh",
   "foreign": "en",
-  "popup_search": true,
+  "popup_search": false,
   "auto_pron": true,
   "function_key": "altKey",
   "dictionaries": {
