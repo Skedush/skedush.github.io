@@ -7,6 +7,7 @@
 - [ ] Read for half an hour every day.
 - [ ] Avoid watching gaming videos and live streams.
 - [ ] Minimize distractions such as excessive phone use or idling during work hours. Focus on completing tasks diligently and dedicate time to learning and personal improvement once work is finished.
+- [ ] Obtained the National Certificate of Computer Technology and Software Professional Qualification.
 # Fitness goals
 
 - Monday:chest and leg.
