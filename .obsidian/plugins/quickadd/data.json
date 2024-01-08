@@ -1,6 +1,36 @@
 {
   "choices": [
     {
+      "id": "e8ab26cc-4b8c-4e9c-bf0c-b7382f080de4",
+      "name": "日记",
+      "type": "Template",
+      "command": false,
+      "templatePath": "template/日记模板.md",
+      "fileNameFormat": {
+        "enabled": true,
+        "format": "{{DATE:YYYY-MM}}"
+      },
+      "folder": {
+        "enabled": true,
+        "folders": [
+          "content/生而为人我深谢/2024"
+        ],
+        "chooseWhenCreatingNote": false,
+        "createInSameFolderAsActiveFile": false,
+        "chooseFromSubfolders": false
+      },
+      "appendLink": false,
+      "openFileInNewTab": {
+        "enabled": false,
+        "direction": "vertical",
+        "focus": true
+      },
+      "openFile": true,
+      "openFileInMode": "default",
+      "fileExistsMode": "Append to the top of the file",
+      "setFileExistsBehavior": true
+    },
+    {
       "id": "4120e2c7-3650-47f6-9187-f26e76a619a0",
       "name": "工作闪念",
       "type": "Capture",
@@ -34,36 +64,6 @@
       },
       "openFile": true,
       "openFileInMode": "default"
-    },
-    {
-      "id": "e8ab26cc-4b8c-4e9c-bf0c-b7382f080de4",
-      "name": "日记",
-      "type": "Template",
-      "command": false,
-      "templatePath": "template/日记模板.md",
-      "fileNameFormat": {
-        "enabled": true,
-        "format": "{{DATE:YYYY-MM}}"
-      },
-      "folder": {
-        "enabled": true,
-        "folders": [
-          "content/生而为人我深谢/2024"
-        ],
-        "chooseWhenCreatingNote": false,
-        "createInSameFolderAsActiveFile": false,
-        "chooseFromSubfolders": false
-      },
-      "appendLink": false,
-      "openFileInNewTab": {
-        "enabled": false,
-        "direction": "vertical",
-        "focus": true
-      },
-      "openFile": true,
-      "openFileInMode": "default",
-      "fileExistsMode": "Append to the top of the file",
-      "setFileExistsBehavior": true
     },
     {
       "id": "2aca7375-ec62-4380-a7c3-f9cd1abe5245",
