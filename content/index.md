@@ -51,6 +51,6 @@ title: 因果现象造化纯粹认知
 	——《星际宝贝》 Lilo & Stitch
 ---
 
-可以联系我一起讨论新技术！
+可以联系我一起探讨新技术！
 ![[601701307489_.pic.jpg]]
 Home🌐:[skedush.xyz](https://skedush.xyz)
