@@ -50,12 +50,41 @@ adj. 已到达的
 2024-1 daily
 
 #word
+#### beef noodles
+?
+牛肉面
+**Sentences**:
+*Had beef noodles for lunch, with plenty of beef, and it only cost 13 yuan.*
+午餐吃牛肉面，牛肉很多，而且只要13元。
+2024-1 daily
+
+#word
+#### benefits
+?
+n. 利益，好处；福利政策；救济金；福利；义演，义卖（benefit 的复数）
+**Sentences**:
+*The benefits at government units are still good.*
+政府部门的福利仍然不错。
+2024-1 daily
+
+#word
 #### browsed
 ?
 浏览
 **Sentences**:
 *In the evening, watched a movie and browsed videos.*
 晚上，看电影，浏览视频。
+2024-1 daily
+
+#word
+#### business trip
+?
+出差旅行：为工作目的而进行的旅行。
+**Sentences**:
+*# 2024-01-19
+#Friday   #Zhongguancun-Science-Park  #Cloudy 
+Today, I went on a business trip to the municipal government to debug the system.*
+#星期五#中关村科技园#阴天今天我出差去市政府调试系统。
 2024-1 daily
 
 #word
@@ -303,6 +332,17 @@ n. （Matters）马特斯（人名）
 2024-1 daily
 
 #word
+#### municipal
+?
+adj. 城市的，市政的；自治城市的，地方自治的；内政的
+**Sentences**:
+*# 2024-01-19
+#Friday   #Zhongguancun-Science-Park  #Cloudy 
+Today, I went on a business trip to the municipal government to debug the system.*
+#星期五#中关村科技园#阴天今天我出差去市政府调试系统。
+2024-1 daily
+
+#word
 #### muscle
 ?
 n. 肌肉；体力，力气；权力，影响力；<非正式>身强力壮的男子（们）
@@ -387,6 +427,18 @@ v. 演出，表演；执行，履行（尤指复杂的任务或行动）；运�
 **Sentences**:
 *Discussed some work-related matters, which may lead to some personnel changes.*
 讨论了一些与工作相关的事情，这可能会导致一些人事变动。
+2024-1 daily
+
+#word
+#### plenty
+?
+n. 富裕，充裕
+pron. 大量，众多
+adv. 大量，很多；<非正式>非常，十分；<非正式>足够有余
+det. <非正式>很多，大量
+**Sentences**:
+*Had beef noodles for lunch, with plenty of beef, and it only cost 13 yuan.*
+午餐吃牛肉面，牛肉很多，而且只要13元。
 2024-1 daily
 
 #word
