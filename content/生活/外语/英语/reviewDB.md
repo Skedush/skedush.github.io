@@ -118,6 +118,27 @@ adj. 已到达的
 2024-1 daily
 
 #word
+#### attend
+?
+v. 随同，陪同；经常去，定期去(学校、教堂等)；伴随……而至，（作为结果）伴随；出席，参加；注意，专心；处理，照料；致力于
+[ 第三人称单数 attends 现在分词 attending 过去式 attended 过去分词 attended ]
+**Sentences**:
+*# 2024-01-05
+#Friday    #Zhongguancun-Science-Park  #Sunny 
+I slacked off at work and took the afternoon off due to needing to attend a relative's wedding over the weekend.*
+由于周末要去参加一个亲戚的婚礼，我在工作上懈怠了，下午休息了。
+2024-1 daily
+
+#word
+#### attended
+?
+v. 参加；注意；照料（attend 的过去分词）；伴随
+**Sentences**:
+*For dinner, I attended a banquet at a hotel.*
+晚餐，我参加了在一家旅馆举行的宴会。
+2024-1 daily
+
+#word
 #### attractive
 ?
 adj. 吸引人的，有吸引力的；（人）迷人的，有魅力的；值得考虑的，值得做的；（与）引力（有关）的
@@ -143,6 +164,18 @@ adj. 可用的，可获得的；有空的，有闲暇的；未婚的，单身的
 **Sentences**:
 *Yesterday, there was no hot water, so I rebooted the system to check if there is hot water available today.*
 昨天没有热水，所以我重新启动了系统，看看今天有没有热水。
+2024-1 daily
+
+#word
+#### banquet
+?
+n. 宴会，盛宴；筵席，宴席
+v. 宴请；参加宴会
+【名】 （Banquet）（法）邦凯，（西）班克特（人名）
+[ 复数 banquets 第三人称单数 banquets 现在分词 banqueting 过去式 banqueted 过去分词 banqueted ]
+**Sentences**:
+*For dinner, I attended a banquet at a hotel.*
+晚餐，我参加了在一家旅馆举行的宴会。
 2024-1 daily
 
 #word
@@ -179,6 +212,19 @@ n. 便当；盒饭
 **Sentences**:
 *Had Dongchi Bento, then biked around the neighborhood for half an hour.*
 吃了东池便当，然后在附近骑了半小时自行车。
+2024-1 daily
+
+#word
+#### blanket
+?
+n. 毯子，毛毯；厚层，覆盖层；气氛，氛围；障碍，障碍物；（平版印刷的）橡皮布；（平版印刷的）橡皮
+v. 覆盖，盖住，笼罩；消除（声音），使（声音）模糊不清；迎风航行抢（他船）的上风
+adj. 总括的，全面的，通用的
+**Sentences**:
+*# 2024-01-06
+#Saturday   #Home  #Sunny 
+I felt very hot while sleeping last night because the blanket my mom laid out for me was too thick.*
+昨天晚上睡觉的时候我觉得很热，因为妈妈给我铺的毯子太厚了。
 2024-1 daily
 
 #word
@@ -242,6 +288,16 @@ adj. 无虚席的，满场的
 2024-1 daily
 
 #word
+#### cash
+?
+v. 提，取（银行账户中的钱款）；停止提供，不再给予； 退出，不参加；（军队）撤离； 脱离（社会），不与人交往；离开；（将某物从某地或位置）抽回，移开；撤回，收回（前言）；（从某物中）拿出；停止提供，召回；退出，返回（至另一个房间）；（因对工作时间、报酬等不满意而）罢工；取消（许可、邀请或提议）；戒毒
+[ 第三人称单数 withdraws 现在分词 withdrawing 过去式 withdrew 过去分词 withdrawn ]
+**Sentences**:
+*I planned to wash my hair and withdraw some cash, but I found out that the hair salon where I had previously prepaid was closed.*
+我打算洗头取些现金，但我发现我之前预付费的发廊已经关门了。
+2024-1 daily
+
+#word
 #### casually
 ?
 adv. 随意地，漫不经心地；临时地；偶然地
@@ -249,6 +305,17 @@ adv. 随意地，漫不经心地；临时地；偶然地
 **Sentences**:
 *Just handle it casually.*
 随便处理就好。
+2024-1 daily
+
+#word
+#### catch
+?
+v. 接住；抓住，握住；逮住，捕获；发现，撞见；钩住，绊住；击中，碰到；得病，染病；引起，吸引（注意或兴趣）；（对某事）感到兴奋；搭乘，赶上；及时做（或谈等）；出席，观看；表现，再现；使措手不及；察觉，瞥见；听清，理解；突然意识到；盛住（液体）；（板球）使被接杀出局；（棒球中）当接球手；受（光）照射；（风或水）裹挟，推动；着火，燃烧；遭遇，陷入（困境）；固定，系牢；被（悬浮物）覆盖
+n. 接（球等）；（鱼的）捕获量，捕获物；<旧>理想的对象；门闩，吊扣；（声息）哽塞；隐患，隐藏的困难；（乐）轮唱片段；传接球游戏；捉人游戏
+[ 复数 catches 第三人称单数 catches 现在分词 catching 过去式 caught 过去分词 caught ]
+**Sentences**:
+*After quickly moving my things, I rushed to catch transportation.*
+我迅速搬了东西后，就赶去赶交通工具。
 2024-1 daily
 
 #word
@@ -271,6 +338,16 @@ v. 以胸部推（球）
 #Saturday   #East-Ou-Residential-Community #Sunny 
 Today, worked out, focused on chest muscles.Played games at the internet cafe, watched anime in the evening.*
 # 2024-01-27 #星期六#东欧住宅社区#今天阳光明媚，锻炼，专注于胸部肌肉。在网吧玩游戏，晚上看动漫。
+2024-1 daily
+
+#word
+#### clogged
+?
+adj. 阻塞的；堵住的
+v. 阻塞；妨碍（clog 的过去分词）
+**Sentences**:
+*Before leaving, my mom had a bathroom incident where the toilet got clogged.*
+临走前，我妈的厕所出了点问题，马桶堵了。
 2024-1 daily
 
 #word
@@ -310,6 +387,16 @@ v. 接触，联系（contact的第三人称单数形式）
 **Sentences**:
 *We exchanged WeChat contacts.*
 我们交换了微信联系人。
+2024-1 daily
+
+#word
+#### conversation
+?
+n. （非正式的）谈话，交谈；<旧>社交，交际
+[ 复数 conversations ]
+**Sentences**:
+*After leaving, I briefly met with a potential match at a designated location, but she had friends with her, making it difficult to have a proper conversation.*
+离开后，我在一个指定的地点与一位潜在的伴侣短暂会面，但她身边有朋友，所以很难进行适当的交谈。
 2024-1 daily
 
 #word
@@ -385,6 +472,15 @@ vt. 致力于，献身于；（在书、音乐或作品的前部）题献词；�
 2024-1 daily
 
 #word
+#### deliberated
+?
+vbl. 思量
+**Sentences**:
+*Unable to withdraw the money, I deliberated whether to give the gift money.*
+由于无法取款，我考虑是否要给礼金。
+2024-1 daily
+
+#word
 #### delivery
 ?
 n. 递送，投递；递送物；演讲风格，演说方式；分娩，生产；投球方式
@@ -416,6 +512,16 @@ v. 设计，制图，构思；筹划，制订；预定，指定
 **Sentences**:
 *Discovered that the issue from yesterday was a design problem on my part, and I need to redesign the related form component.*
 发现昨天的问题是我的设计问题，我需要重新设计相关的表单组件。
+2024-1 daily
+
+#word
+#### designated
+?
+adj. 指定的，标出的
+vt. 把……定名为，把……描述为；任命，指定；标明，标示（designate的过去式和过去分词）
+**Sentences**:
+*After leaving, I briefly met with a potential match at a designated location, but she had friends with her, making it difficult to have a proper conversation.*
+离开后，我在一个指定的地点与一位潜在的伴侣短暂会面，但她身边有朋友，所以很难进行适当的交谈。
 2024-1 daily
 
 #word
@@ -489,6 +595,15 @@ v. 讨论（discuss 的过去分词）；商讨
 **Sentences**:
 *Discussed some work-related matters, which may lead to some personnel changes.*
 讨论了一些与工作相关的事情，这可能会导致一些人事变动。
+2024-1 daily
+
+#word
+#### dishes
+?
+n. 菜肴；餐具（dish 的复数）
+**Sentences**:
+*The event had a simple opening and the banquet had minimal dishes.*
+活动的开场很简单，宴会上的菜也很少。
 2024-1 daily
 
 #word
@@ -595,6 +710,16 @@ n. 设备，用具；（对某人或某物的）装备过程；（做某事应�
 **Sentences**:
 *The items I ordered on Pinduoduo arrived; they are all equipment for the newly rented room.*
 我在拼多多上订购的东西到了;这些都是新租房间的设备。
+2024-1 daily
+
+#word
+#### even though
+?
+尽管，虽然：用于加强说“虽然”的语气。
+即使，纵然：用于表示尽管有某种可能性或情况，仍然会做某事。
+**Sentences**:
+*I gave the gift money even though it wasn't necessary, but I did it for the sake of our friendship.*
+我给了压岁钱，虽然没有必要，但我是为了我们的友谊才这么做的。
 2024-1 daily
 
 #word
@@ -751,6 +876,17 @@ n. 游手好闲
 2024-1 daily
 
 #word
+#### incident
+?
+n. 事件，事故；（两国间的）冲突，严重摩擦；<法律>（职务、财产等所有物的）附属特权
+adj. 由……产生的；<法律>附属的；入射的
+[ 复数 incidents ]
+**Sentences**:
+*Before leaving, my mom had a bathroom incident where the toilet got clogged.*
+临走前，我妈的厕所出了点问题，马桶堵了。
+2024-1 daily
+
+#word
 #### internship
 ?
 n. 实习生；实习期；实习医师的职位
@@ -800,6 +936,19 @@ v. 发行；分发；流出（issue 的第三人称单数）
 #Wednesday     #Zhongguancun-Science-Park  #Sunny  
 Worked as usual, encountered issues with the source code of an Alibaba third-party dependency during development.*
 正常工作，在开发过程中遇到了阿里巴巴第三方依赖的源代码问题。
+2024-1 daily
+
+#word
+#### laid
+?
+vt. 放；铺设；安排（lay 的过去分词）
+adj. 松弛的；从容不迫的
+n. （Laid）（瑞典）莱德（人名）
+**Sentences**:
+*# 2024-01-06
+#Saturday   #Home  #Sunny 
+I felt very hot while sleeping last night because the blanket my mom laid out for me was too thick.*
+昨天晚上睡觉的时候我觉得很热，因为妈妈给我铺的毯子太厚了。
 2024-1 daily
 
 #word
@@ -902,6 +1051,15 @@ n. （Met）人名；（瑞典）梅特
 2024-1 daily
 
 #word
+#### minimal
+?
+adj. 极小的，极少的；极简抽象艺术的；简朴的，朴实无华的；极简的（指短小乐句不断重复并逐渐变化）；最小差别的
+**Sentences**:
+*The event had a simple opening and the banquet had minimal dishes.*
+活动的开场很简单，宴会上的菜也很少。
+2024-1 daily
+
+#word
 #### modifications
 ?
 n. 修改；修饰；变型；条款修订
@@ -960,6 +1118,18 @@ adv. 自然地，天然地；当然地，必然地；天生地，天性地；不
 **Sentences**:
 *Naturally, I don't need to be overly dedicated.*
 当然，我不需要过于专注。
+2024-1 daily
+
+#word
+#### necessary
+?
+adj. 必要的，必需的；必然的，不可避免的；迫不得已的，非自愿的
+n. （生活）必需品；<英，非正式>必要的事（the necessary）；<英，非正式>足够的钱（the necessary）
+【名】 （Necessary）（英）内塞瑟里（人名）
+[ 复数 necessaries 比较级 more necessary 最高级 most necessary ]
+**Sentences**:
+*I gave the gift money even though it wasn't necessary, but I did it for the sake of our friendship.*
+我给了压岁钱，虽然没有必要，但我是为了我们的友谊才这么做的。
 2024-1 daily
 
 #word
@@ -1095,6 +1265,17 @@ n. <英>燕麦粥，麦片粥；<英，非正式>关押期，监禁期
 2024-1 daily
 
 #word
+#### potential
+?
+adj. 潜在的，可能的
+n. （事物的）潜力，可能性；（人的）潜能，潜力；电势，电位，电压
+[ 复数 potentials ]
+**Sentences**:
+*After leaving, I briefly met with a potential match at a designated location, but she had friends with her, making it difficult to have a proper conversation.*
+离开后，我在一个指定的地点与一位潜在的伴侣短暂会面，但她身边有朋友，所以很难进行适当的交谈。
+2024-1 daily
+
+#word
 #### premeditated
 ?
 adj. 预谋的；预先考虑的；经预先计划的
@@ -1105,6 +1286,25 @@ v. 预谋（premeditate 的过去式和过去分词）；预先考虑
 2024-1 daily
 
 #word
+#### prepaid
+?
+adj. 先付的，已支付的
+v. 预付（prepay 的过去式和过去分词）
+**Sentences**:
+*I planned to wash my hair and withdraw some cash, but I found out that the hair salon where I had previously prepaid was closed.*
+我打算洗头取些现金，但我发现我之前预付费的发廊已经关门了。
+2024-1 daily
+
+#word
+#### previously
+?
+adv. 以前地，先前地
+**Sentences**:
+*I planned to wash my hair and withdraw some cash, but I found out that the hair salon where I had previously prepaid was closed.*
+我打算洗头取些现金，但我发现我之前预付费的发廊已经关门了。
+2024-1 daily
+
+#word
 #### promising
 ?
 adj. 有希望的，有前途的
@@ -1112,6 +1312,17 @@ v. 承诺，答应；使很可能，预示（promise 的现在分词形式）
 **Sentences**:
 *It took her about 5 minutes to finish, and she mentioned needing my help again tomorrow, promising to remind me.*
 她花了大约5分钟的时间才完成，她提到明天还需要我的帮助，并答应提醒我。
+2024-1 daily
+
+#word
+#### proper
+?
+adj. 真正的，像样的；实际上的，严格意义上的；正确的，合适的；合理的，合乎体统的；非常有礼貌的，循规蹈矩的；<正式> 特有的，专有的；完全的，彻底的；<英，非正式> 用于强调地道的；（圣诗、教义、祷词等）用于某特定场合的；（纹章）原色的；（数）真的，正常的
+adv. <英，非正式> 完全地，彻底地；<英，非正式> 正确地，恰当地
+n. 特定季节（或节日）的礼仪
+**Sentences**:
+*After leaving, I briefly met with a potential match at a designated location, but she had friends with her, making it difficult to have a proper conversation.*
+离开后，我在一个指定的地点与一位潜在的伴侣短暂会面，但她身边有朋友，所以很难进行适当的交谈。
 2024-1 daily
 
 #word
@@ -1229,6 +1440,18 @@ Today, I was waiting for the arrival of the Haier refrigerator and Xiaomi washin
 2024-1 daily
 
 #word
+#### relative's
+?
+亲人的
+
+**Sentences**:
+*# 2024-01-05
+#Friday    #Zhongguancun-Science-Park  #Sunny 
+I slacked off at work and took the afternoon off due to needing to attend a relative's wedding over the weekend.*
+由于周末要去参加一个亲戚的婚礼，我在工作上懈怠了，下午休息了。
+2024-1 daily
+
+#word
 #### relatively
 ?
 adv. 相当地，相对地
@@ -1255,6 +1478,17 @@ v. 提醒，使想起；（因相像）使联想起（remind sb. of）
 **Sentences**:
 *It took her about 5 minutes to finish, and she mentioned needing my help again tomorrow, promising to remind me.*
 她花了大约5分钟的时间才完成，她提到明天还需要我的帮助，并答应提醒我。
+2024-1 daily
+
+#word
+#### rental
+?
+n. 租费，租金；出租，租赁；<美>租用物（尤指房屋或车辆）
+adj. （与）租借（有关）的，可供租用的
+[ 复数 rentals ]
+**Sentences**:
+*Before going home, I changed to a different room in an available rental space.*
+在回家之前，我在一个可用的出租空间里换了一个不同的房间。
 2024-1 daily
 
 #word
@@ -1329,6 +1563,16 @@ n. （尤指一群人的）冲，奔；（空气、水等）湍流；匆忙，�
 2024-1 daily
 
 #word
+#### rushed
+?
+adj. 仓促而就的，草率的；忙碌的
+v. 迅速移动；匆忙行事；突袭（rush 的过去式和过去分词形式）
+**Sentences**:
+*After quickly moving my things, I rushed to catch transportation.*
+我迅速搬了东西后，就赶去赶交通工具。
+2024-1 daily
+
+#word
 #### salary
 ?
 n. 薪金，薪水
@@ -1336,6 +1580,17 @@ v. <古> 给……薪金
 **Sentences**:
 *Receive my salary.*
 领取我的薪水。
+2024-1 daily
+
+#word
+#### salon
+?
+n. 美发厅，美容院；高级服装店，时装店；<旧>（大宅中的）客厅，会客室；沙龙（旧时作家、艺术家等在名流家中定期举行的聚会）；沙龙画展（Salon）
+【名】 （Salon）（法、西、捷、瑞典）萨隆（人名）
+[ 复数 salons ]
+**Sentences**:
+*I planned to wash my hair and withdraw some cash, but I found out that the hair salon where I had previously prepaid was closed.*
+我打算洗头取些现金，但我发现我之前预付费的发廊已经关门了。
 2024-1 daily
 
 #word
@@ -1407,6 +1662,17 @@ n. （Since）（法、美）新斯（人名）
 **Sentences**:
 *She needed me to scan a QR code to follow her, and since she seemed quite attractive, I agreed.*
 她需要我扫描二维码来关注她，因为她看起来很有魅力，我同意了。
+2024-1 daily
+
+#word
+#### slacked
+?
+v．松懈，懒散：减少工作、努力或注意力
+**Sentences**:
+*# 2024-01-05
+#Friday    #Zhongguancun-Science-Park  #Sunny 
+I slacked off at work and took the afternoon off due to needing to attend a relative's wedding over the weekend.*
+由于周末要去参加一个亲戚的婚礼，我在工作上懈怠了，下午休息了。
 2024-1 daily
 
 #word
@@ -1541,6 +1807,19 @@ adj. 美味的；<非正式> 有趣的；<英，非正式> 性感的，迷人的
 2024-1 daily
 
 #word
+#### thick
+?
+adj. 厚的，粗的；有……厚的；（衣服）厚重的，暖和的 ；（字体）粗体的；茂密的，繁茂的；（毛发）浓密的；（烟、云、雾等）浑浊的，能见度低的；（液体）稠的，浓的；<非正式> 愚钝的，笨的；（尤指由于疾病、酗酒而使头脑）隐痛的，思路不清的；充满的，弥漫的；（因为难过等而嗓音）沙哑的，低沉的；（口音）重的，难听懂的；亲密无间的，交情厚的
+n. 在……最激烈时，在……最紧张的时刻（the thick）
+adv. 厚地，浓密地；大量地
+**Sentences**:
+*# 2024-01-06
+#Saturday   #Home  #Sunny 
+I felt very hot while sleeping last night because the blanket my mom laid out for me was too thick.*
+昨天晚上睡觉的时候我觉得很热，因为妈妈给我铺的毯子太厚了。
+2024-1 daily
+
+#word
 #### tidied
 ?
 v. 整理（tidy 的过去式和过去分词）
@@ -1572,12 +1851,41 @@ n. 盛零碎物品的容器；<英>整理，收拾；<美>（椅子靠背的）�
 2024-1 daily
 
 #word
+#### toilet
+?
+n. 抽水马桶，坐便器；厕所，洗手间；梳洗，打扮；（治疗过程中对身体部位的）清洗；上厕所，解手
+v. 照料（人，尤其是婴儿或伤病人士）上厕所；上厕所；梳妆，打扮
+[ 复数 toilets 第三人称单数 toilets 现在分词 toileting 过去式 toileted 过去分词 toileted ]
+**Sentences**:
+*Before leaving, my mom had a bathroom incident where the toilet got clogged.*
+临走前，我妈的厕所出了点问题，马桶堵了。
+2024-1 daily
+
+#word
+#### transportation
+?
+n. 运输，运送；交通运输系统；运输工具，交通方式；（犯人的）流放，放逐
+**Sentences**:
+*After quickly moving my things, I rushed to catch transportation.*
+我迅速搬了东西后，就赶去赶交通工具。
+2024-1 daily
+
+#word
 #### tv dramas
 ?
 电视剧
 **Sentences**:
 *I watched TV dramas, and at noon, I had to go to my aunt's house, which is where the main couple of the wedding resides.*
 我看了电视剧，中午，我不得不去我姑姑家，那是婚礼的主要夫妇住的地方。
+2024-1 daily
+
+#word
+#### unable
+?
+adj. 不能胜任的，不会的
+**Sentences**:
+*Unable to withdraw the money, I deliberated whether to give the gift money.*
+由于无法取款，我考虑是否要给礼金。
 2024-1 daily
 
 #word
@@ -1598,6 +1906,16 @@ n. 腰，腰围；（衣服的）腰部，腰身；船腰，飞机机身中部�
 **Sentences**:
 *Watched videos, cooked corn, and after eating, did some exercises for the waist and legs.*
 看视频，煮玉米，吃完后，做一些腰部和腿部的运动。
+2024-1 daily
+
+#word
+#### wandered
+?
+1. 漫游，闲逛：在一个地方到另一个地方漫无目的地走动，通常是为了消磨时间或欣赏周围的景色。
+2. 走神，心不在焉：注意力不集中，思绪飘忽。
+**Sentences**:
+*After a simple meal, I helped them move some things, then went to withdraw money and wandered the streets for a while before returning home.*
+吃了一顿简单的饭，我帮他们搬了一些东西，然后去取了钱，在街上逛了一会儿才回家。
 2024-1 daily
 
 #word
@@ -1647,6 +1965,16 @@ v. 结婚，娶，嫁；（使）结合；坚持，专心于（活动、信仰�
 2024-1 daily
 
 #word
+#### whether
+?
+conj. 是否（表选择或可能性）；不管，无论
+pron. <古>两个中的哪一个
+**Sentences**:
+*Unable to withdraw the money, I deliberated whether to give the gift money.*
+由于无法取款，我考虑是否要给礼金。
+2024-1 daily
+
+#word
 #### whole
 ?
 adj. 全部的，整个的；完整的，完好无损的；(强调大小或重要性）整个的，全部的；要点，主旨；健全的，健康的
@@ -1657,6 +1985,16 @@ adv. 完全地；整个
 #Sunday   #East-Ou-Residential-Community  #Sunny  
 This afternoon, I went to the internet café and played games for the whole afternoon.*
 今天下午，我去网吧玩了一下午的游戏。
+2024-1 daily
+
+#word
+#### withdraw
+?
+v. 提，取（银行账户中的钱款）；停止提供，不再给予； 退出，不参加；（军队）撤离； 脱离（社会），不与人交往；离开；（将某物从某地或位置）抽回，移开；撤回，收回（前言）；（从某物中）拿出；停止提供，召回；退出，返回（至另一个房间）；（因对工作时间、报酬等不满意而）罢工；取消（许可、邀请或提议）；戒毒
+[ 第三人称单数 withdraws 现在分词 withdrawing 过去式 withdrew 过去分词 withdrawn ]
+**Sentences**:
+*I planned to wash my hair and withdraw some cash, but I found out that the hair salon where I had previously prepaid was closed.*
+我打算洗头取些现金，但我发现我之前预付费的发廊已经关门了。
 2024-1 daily
 
 #word
