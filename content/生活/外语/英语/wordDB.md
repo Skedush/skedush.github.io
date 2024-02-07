@@ -121,12 +121,95 @@ bento,    n. 便当；盒饭
 shower,    n. 淋浴器，花洒；淋浴间，淋浴室；淋浴，洗澡；阵雨，阵雪；（落下的东西）一大批，一阵； 流星雨；<美>（为即将结婚或分娩的女子举行的）送礼聚会；<英，非正式> 一群乌合之众，一群笨蛋
 v. 淋浴，洗澡；洒落，（使）纷纷降落；朝......阵雨般地扔（大量小东西）（shower sb. with）；大量给予，慷慨给予
 [ 复数 showers 第三人称单数 showers 现在分词 showering 过去式 showered 过去分词 showered ]
+hacked,    v.
+砍;劈;非法侵入(他人计算机系统);猛踢;
+hack的过去分词和过去式;
+redeploy,    vt. 重新部署；调动
+vi. 重新部署
+[ 第三人称单数 redeploys 现在分词 redeploying 过去式 redeployed 过去分词 redeployed ]
+luckily,    adv. 幸好，侥幸；幸运地
+otherwise,    adv. 否则，不然；除此以外，在其他方面；不同地，另外地；以其他方式，用别的方法
+adj. 不是那样的，另外情况下的
+locally,    adv. 局部地；在本地
+due,    adj. 到期的，预期的；应有的，应得的；应付的，应给的；适当的
+adv. 正对着
+n. 应得，所得；会费
+breach,    n. 违反，破坏；（关系）中断，终止；缺口
+v. 违反，破坏；在……上打开缺口
+[ 复数 breaches 第三人称单数 breaches 现在分词 breaching 过去式 breached 过去分词 breached ]
+basically,    adv. 基本上，大体上；从根本上说，总的说来
+whole,    adj. 全部的，整个的；完整的，完好无损的；(强调大小或重要性）整个的，全部的；要点，主旨；健全的，健康的
+n. 整体，全部
+adv. 完全地；整个
+arrival,    n. 到达，到来；到达者，加入者；产生，出现
+[ 复数 arrivals ]
+refrigerator,    n. 冰箱，冷藏库
+washing machine,    洗衣机，洗涤机
+purchased,    adj. 已经购买的
+v. 购买（purchase 的过去分词）
+opportunity,    n. 时机，机会
+[ 复数 opportunities ]
+match,    n. 比赛，竞赛；火柴；敌手，旗鼓相当的人；相配的人（或物）；非常相似的东西；婚姻，配偶；适合，匹配
+v. 比得上，敌得过；使成对，使相配，使相称；与……一致，与……相符；使较量，使竞赛；适应，满足；等额提供
+[ 复数 matches 第三人称单数 matches 现在分词 matching 过去式 matched 过去分词 matched ]
+adapter,    n. 适配器；改编者；接合器；适应者
+capacity,    n. 能力，才能；容积，容纳能力；职位，职责；功率，容积；生产量，生产能力
+adj. 无虚席的，满场的
+[ 复数 capacities ]
+amount,    n. 数量，量；金额，钱数；（感情、质量的）程度
+v. 达到，总计（amount to）；等于，意味着（amount to）；发展成，变成（amount to）
+[ 复数 amounts 第三人称单数 amounts 现在分词 amounting 过去式 amounted 过去分词 amounted ]
+developing,    adj. （国家）发展中的；正在生长的，正在发展的
+v. （使）成长，发展；研制，研发；形成（观点）（develop 的现在分词）
+requirements,    n. 要求（requirement 的复数）；调整需要量，必需品
+modifying,    v. 修改，改进；修饰，限定；缓和，使温和；使改形，使转化；变（音）（modify 的现在分词）
+discovered,    v. 发现，找到（discover 的过去式和过去分词）
+issue,    n. 议题，争论点；（报纸、杂志等的）期，号；发放，分配；（新股票或邮票等的）发行；子女，后嗣；流出，发出；<旧>结果，后果
+v. 发表，颁布；分发，分配；正式发行；流出，发出；由……产生，由……得出
+[ 复数 issues 第三人称单数 issues 现在分词 issuing 过去式 issued 过去分词 issued ]
+part,    n. 部分；某物的部分（局部）；（书、戏剧、电视剧等的）部，篇，集；（动植物的）器官，部位；部件，零件；成员，参与人员；（世界、国家或城镇等的）区域，地区；（头发的）分缝；（角色的）台词和动作，角色；（在活动或事件中的）作用；（乐器或声音的）声部，音部；（等）份；<古>能力
+v. （使）分开，（使）分离；分别；分手；放弃，移交；给（头发）分缝
+adv. 既有……又有……（part sth., part sth.）；不完全地，部分地
+adj. 部分的，不完全的
+【名】 （Part）(英、瑞典）帕特，（泰）巴，（法）帕尔（人名）
+[ 复数 parts 第三人称单数 parts 现在分词 parting 过去式 parted 过去分词 parted ]
+mentioned,    v. 提及，说起，谈到（mention 的过去式和过去分词）
+recently,    adv. 最近，不久前
+scammed,    欺诈（scam 的过去式与过去分词形式）
+retrieving,    v. 取回，索回；检索数据；挽回，找回；收绕钓鱼线；捡起；回忆；（狗）找到并衔回（中枪猎物）（retrieve 的现在分词）
+seems,    v．似乎，好像：表示外表上的观察或感觉，但不一定是事实。
+unlikely,    adj. 不大可能发生的；未必真实的，难以相信的； 非心目中的，不大恰当的；不典型的；（两个人或物）不般配的
+adv. 未必
+[ 比较级 unlikelier或more unlikely 最高级 unlikeliest或most unlikely ]
+smoke-free,    adj. 无烟的；禁止吸烟的
+determined,    adj. 下定决心的，坚定的
+v. 决定，控制；查明，确定；下定决心（determine 的过去式和过去分词形式）
+[ 比较级 more determined 最高级 most determined ]
+debts,    n. 负债类，债务（debt 的复数形式）
+spend,    v. 度过，花（时间）；花（钱），花费；消耗，用尽（精力等）
+n. 花费，开销
+n. 预算
+[ 第三人称单数 spends 现在分词 spending 过去式 spent 过去分词 spent ]
+remaining,    adj. 剩下的，遗留的；尚未使用、解决的；尚未发生的
+v. 保持不变；遗留；尚待处理（remain 的现在分词）
+fitness,    n. 健康；（生物体的）环境适度；适合，胜任
+tidied,    v. 整理（tidy 的过去式和过去分词）
+rearranged,    v. 重新排列，重新整理；重新安排（rearrange 的过去式和过去分词）
+layout,    n. 布局，设计；版面编排，版面设计；布置的东西，陈列品
+[ 复数 layouts ]
+arrange,    v. 安排，筹备；整理，布置，排列；改编；商定
+[ 第三人称单数 arranges 现在分词 arranging 过去式 arranged 过去分词 arranged ]
 
 #### Familiar
 
 
 #### Known
-
+design,    n. 设计，布局，安排；设计艺术，构思；设计图，图纸；图案，花纹；计划，意图
+v. 设计，制图，构思；筹划，制订；预定，指定
+【名】 （Design）（俄、巴、印）迪赛（人名）
+[ 复数 designs 第三人称单数 designs 现在分词 designing 过去式 designed 过去分词 designed ]
+shared,    adj. 分享的，共有的
+v. 共享，合用；分配；共同拥有（某种看法、特质或经历）（share 的过去式和过去分词形式）
 
 #### Learned
 
@@ -255,3 +338,87 @@ n. 便当；盒饭  ,  bento
 n. 淋浴器，花洒；淋浴间，淋浴室；淋浴，洗澡；阵雨，阵雪；（落下的东西）一大批，一阵； 流星雨；<美>（为即将结婚或分娩的女子举行的）送礼聚会；<英，非正式> 一群乌合之众，一群笨蛋
 v. 淋浴，洗澡；洒落，（使）纷纷降落；朝......阵雨般地扔（大量小东西）（shower sb. with）；大量给予，慷慨给予
 [ 复数 showers 第三人称单数 showers 现在分词 showering 过去式 showered 过去分词 showered ]  ,  shower
+v.
+砍;劈;非法侵入(他人计算机系统);猛踢;
+hack的过去分词和过去式;  ,  hacked
+vt. 重新部署；调动
+vi. 重新部署
+[ 第三人称单数 redeploys 现在分词 redeploying 过去式 redeployed 过去分词 redeployed ]  ,  redeploy
+adv. 幸好，侥幸；幸运地  ,  luckily
+adv. 否则，不然；除此以外，在其他方面；不同地，另外地；以其他方式，用别的方法
+adj. 不是那样的，另外情况下的  ,  otherwise
+adv. 局部地；在本地  ,  locally
+adj. 到期的，预期的；应有的，应得的；应付的，应给的；适当的
+adv. 正对着
+n. 应得，所得；会费  ,  due
+n. 违反，破坏；（关系）中断，终止；缺口
+v. 违反，破坏；在……上打开缺口
+[ 复数 breaches 第三人称单数 breaches 现在分词 breaching 过去式 breached 过去分词 breached ]  ,  breach
+adv. 基本上，大体上；从根本上说，总的说来  ,  basically
+adj. 全部的，整个的；完整的，完好无损的；(强调大小或重要性）整个的，全部的；要点，主旨；健全的，健康的
+n. 整体，全部
+adv. 完全地；整个  ,  whole
+n. 到达，到来；到达者，加入者；产生，出现
+[ 复数 arrivals ]  ,  arrival
+n. 冰箱，冷藏库  ,  refrigerator
+洗衣机，洗涤机  ,  washing machine
+adj. 已经购买的
+v. 购买（purchase 的过去分词）  ,  purchased
+n. 时机，机会
+[ 复数 opportunities ]  ,  opportunity
+n. 比赛，竞赛；火柴；敌手，旗鼓相当的人；相配的人（或物）；非常相似的东西；婚姻，配偶；适合，匹配
+v. 比得上，敌得过；使成对，使相配，使相称；与……一致，与……相符；使较量，使竞赛；适应，满足；等额提供
+[ 复数 matches 第三人称单数 matches 现在分词 matching 过去式 matched 过去分词 matched ]  ,  match
+n. 适配器；改编者；接合器；适应者  ,  adapter
+n. 能力，才能；容积，容纳能力；职位，职责；功率，容积；生产量，生产能力
+adj. 无虚席的，满场的
+[ 复数 capacities ]  ,  capacity
+n. 数量，量；金额，钱数；（感情、质量的）程度
+v. 达到，总计（amount to）；等于，意味着（amount to）；发展成，变成（amount to）
+[ 复数 amounts 第三人称单数 amounts 现在分词 amounting 过去式 amounted 过去分词 amounted ]  ,  amount
+adj. （国家）发展中的；正在生长的，正在发展的
+v. （使）成长，发展；研制，研发；形成（观点）（develop 的现在分词）  ,  developing
+n. 要求（requirement 的复数）；调整需要量，必需品  ,  requirements
+v. 修改，改进；修饰，限定；缓和，使温和；使改形，使转化；变（音）（modify 的现在分词）  ,  modifying
+v. 发现，找到（discover 的过去式和过去分词）  ,  discovered
+n. 议题，争论点；（报纸、杂志等的）期，号；发放，分配；（新股票或邮票等的）发行；子女，后嗣；流出，发出；<旧>结果，后果
+v. 发表，颁布；分发，分配；正式发行；流出，发出；由……产生，由……得出
+[ 复数 issues 第三人称单数 issues 现在分词 issuing 过去式 issued 过去分词 issued ]  ,  issue
+n. 部分；某物的部分（局部）；（书、戏剧、电视剧等的）部，篇，集；（动植物的）器官，部位；部件，零件；成员，参与人员；（世界、国家或城镇等的）区域，地区；（头发的）分缝；（角色的）台词和动作，角色；（在活动或事件中的）作用；（乐器或声音的）声部，音部；（等）份；<古>能力
+v. （使）分开，（使）分离；分别；分手；放弃，移交；给（头发）分缝
+adv. 既有……又有……（part sth., part sth.）；不完全地，部分地
+adj. 部分的，不完全的
+【名】 （Part）(英、瑞典）帕特，（泰）巴，（法）帕尔（人名）
+[ 复数 parts 第三人称单数 parts 现在分词 parting 过去式 parted 过去分词 parted ]  ,  part
+v. 提及，说起，谈到（mention 的过去式和过去分词）  ,  mentioned
+adv. 最近，不久前  ,  recently
+欺诈（scam 的过去式与过去分词形式）  ,  scammed
+v. 取回，索回；检索数据；挽回，找回；收绕钓鱼线；捡起；回忆；（狗）找到并衔回（中枪猎物）（retrieve 的现在分词）  ,  retrieving
+v．似乎，好像：表示外表上的观察或感觉，但不一定是事实。  ,  seems
+adj. 不大可能发生的；未必真实的，难以相信的； 非心目中的，不大恰当的；不典型的；（两个人或物）不般配的
+adv. 未必
+[ 比较级 unlikelier或more unlikely 最高级 unlikeliest或most unlikely ]  ,  unlikely
+adj. 无烟的；禁止吸烟的  ,  smoke-free
+adj. 下定决心的，坚定的
+v. 决定，控制；查明，确定；下定决心（determine 的过去式和过去分词形式）
+[ 比较级 more determined 最高级 most determined ]  ,  determined
+n. 负债类，债务（debt 的复数形式）  ,  debts
+v. 度过，花（时间）；花（钱），花费；消耗，用尽（精力等）
+n. 花费，开销
+n. 预算
+[ 第三人称单数 spends 现在分词 spending 过去式 spent 过去分词 spent ]  ,  spend
+adj. 剩下的，遗留的；尚未使用、解决的；尚未发生的
+v. 保持不变；遗留；尚待处理（remain 的现在分词）  ,  remaining
+n. 健康；（生物体的）环境适度；适合，胜任  ,  fitness
+v. 整理（tidy 的过去式和过去分词）  ,  tidied
+v. 重新排列，重新整理；重新安排（rearrange 的过去式和过去分词）  ,  rearranged
+n. 布局，设计；版面编排，版面设计；布置的东西，陈列品
+[ 复数 layouts ]  ,  layout
+v. 安排，筹备；整理，布置，排列；改编；商定
+[ 第三人称单数 arranges 现在分词 arranging 过去式 arranged 过去分词 arranged ]  ,  arrange
+n. 设计，布局，安排；设计艺术，构思；设计图，图纸；图案，花纹；计划，意图
+v. 设计，制图，构思；筹划，制订；预定，指定
+【名】 （Design）（俄、巴、印）迪赛（人名）
+[ 复数 designs 第三人称单数 designs 现在分词 designing 过去式 designed 过去分词 designed ]  ,  design
+adj. 分享的，共有的
+v. 共享，合用；分配；共同拥有（某种看法、特质或经历）（share 的过去式和过去分词形式）  ,  shared

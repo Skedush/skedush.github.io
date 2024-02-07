@@ -1,12 +1,32 @@
 #flashcards
 
 #word
+#### adapter
+?
+n. 适配器；改编者；接合器；适应者
+**Sentences**:
+*However, the washing machine's interface didn't match, so I had to buy an adapter, which cost 5 yuan.*
+然而，洗衣机的接口不匹配，所以我不得不买了一个适配器，花了5元钱。
+2024-1 daily
+
+#word
 #### almost
 ?
 adv. 几乎，差不多
 **Sentences**:
 *After it was almost over, I left with a few colleagues to go singing.*
 快结束后，我和几个同事一起去唱歌了。
+2024-1 daily
+
+#word
+#### amount
+?
+n. 数量，量；金额，钱数；（感情、质量的）程度
+v. 达到，总计（amount to）；等于，意味着（amount to）；发展成，变成（amount to）
+[ 复数 amounts 第三人称单数 amounts 现在分词 amounting 过去式 amounted 过去分词 amounted ]
+**Sentences**:
+*The washing machine has a capacity of 3kg, so it can't handle a large amount of clothes at once.*
+这台洗衣机的容量为3公斤，因此不能同时处理大量的衣服。
 2024-1 daily
 
 #word
@@ -40,6 +60,24 @@ adv. （不）再，再也（不）
 2024-1 daily
 
 #word
+#### arrange
+?
+v. 安排，筹备；整理，布置，排列；改编；商定
+[ 第三人称单数 arranges 现在分词 arranging 过去式 arranged 过去分词 arranged ]
+
+#word
+#### arrival
+?
+n. 到达，到来；到达者，加入者；产生，出现
+[ 复数 arrivals ]
+**Sentences**:
+*# 2024-01-13
+#Saturday #East-Ou-Residential-Community  #Sunny  
+Today, I was waiting for the arrival of the Haier refrigerator and Xiaomi washing machine I purchased online.*
+今天，我在网上购买了海尔冰箱和小米洗衣机，等待着它们的到来。
+2024-1 daily
+
+#word
 #### arrived
 ?
 v. 抵达；抵港（arrive 的过去式）
@@ -47,6 +85,15 @@ adj. 已到达的
 **Sentences**:
 *The corn I bought last week finally arrived.*
 我上周买的玉米终于到了。
+2024-1 daily
+
+#word
+#### basically
+?
+adv. 基本上，大体上；从根本上说，总的说来
+**Sentences**:
+*Due to the server breach, many tasks couldn't be completed, so I basically idled for the day.*
+由于服务器被攻破，很多任务无法完成，所以我这一天基本上都是无所事事。
 2024-1 daily
 
 #word
@@ -77,6 +124,17 @@ n. 便当；盒饭
 2024-1 daily
 
 #word
+#### breach
+?
+n. 违反，破坏；（关系）中断，终止；缺口
+v. 违反，破坏；在……上打开缺口
+[ 复数 breaches 第三人称单数 breaches 现在分词 breaching 过去式 breached 过去分词 breached ]
+**Sentences**:
+*Due to the server breach, many tasks couldn't be completed, so I basically idled for the day.*
+由于服务器被攻破，很多任务无法完成，所以我这一天基本上都是无所事事。
+2024-1 daily
+
+#word
 #### browsed
 ?
 浏览
@@ -94,6 +152,17 @@ n. 便当；盒饭
 #Friday   #Zhongguancun-Science-Park  #Cloudy 
 Today, I went on a business trip to the municipal government to debug the system.*
 #星期五#中关村科技园#阴天今天我出差去市政府调试系统。
+2024-1 daily
+
+#word
+#### capacity
+?
+n. 能力，才能；容积，容纳能力；职位，职责；功率，容积；生产量，生产能力
+adj. 无虚席的，满场的
+[ 复数 capacities ]
+**Sentences**:
+*The washing machine has a capacity of 3kg, so it can't handle a large amount of clothes at once.*
+这台洗衣机的容量为3公斤，因此不能同时处理大量的衣服。
 2024-1 daily
 
 #word
@@ -178,6 +247,15 @@ v. 给（窗户或房间）装上帘子；（用帘子）隔开，覆盖
 2024-1 daily
 
 #word
+#### debts
+?
+n. 负债类，债务（debt 的复数形式）
+**Sentences**:
+*He shared his plan for the year: focus on work to clear debts and spend the remaining time on fitness.*
+他分享了他今年的计划:专注于工作以偿还债务，剩余的时间用于健身。
+2024-1 daily
+
+#word
 #### dedicated
 ?
 adj. 专心致志的，献身的；专用的，专门用途的
@@ -185,6 +263,50 @@ vt. 致力于，献身于；（在书、音乐或作品的前部）题献词；�
 **Sentences**:
 *Naturally, I don't need to be overly dedicated.*
 当然，我不需要过于专注。
+2024-1 daily
+
+#word
+#### design
+?
+n. 设计，布局，安排；设计艺术，构思；设计图，图纸；图案，花纹；计划，意图
+v. 设计，制图，构思；筹划，制订；预定，指定
+【名】 （Design）（俄、巴、印）迪赛（人名）
+[ 复数 designs 第三人称单数 designs 现在分词 designing 过去式 designed 过去分词 designed ]
+**Sentences**:
+*Discovered that the issue from yesterday was a design problem on my part, and I need to redesign the related form component.*
+发现昨天的问题是我的设计问题，我需要重新设计相关的表单组件。
+2024-1 daily
+
+#word
+#### determined
+?
+adj. 下定决心的，坚定的
+v. 决定，控制；查明，确定；下定决心（determine 的过去式和过去分词形式）
+[ 比较级 more determined 最高级 most determined ]
+**Sentences**:
+*He also mentioned he's been smoke-free for 8 days and is determined to quit successfully this time.*
+他还提到他已经戒烟8天了，这次他决心成功戒烟。
+2024-1 daily
+
+#word
+#### developing
+?
+adj. （国家）发展中的；正在生长的，正在发展的
+v. （使）成长，发展；研制，研发；形成（观点）（develop 的现在分词）
+**Sentences**:
+*# 2024-01-12
+#Friday   #Zhongguancun-Science-Park  #Sunny  
+Normal workday, worked on developing custom form-related requirements.*
+# 2024-01-12 #星期五#中关村科技园#阳光正常工作日，致力于开发自定义表单相关要求。
+2024-1 daily
+
+#word
+#### discovered
+?
+v. 发现，找到（discover 的过去式和过去分词）
+**Sentences**:
+*Discovered that the issue from yesterday was a design problem on my part, and I need to redesign the related form component.*
+发现昨天的问题是我的设计问题，我需要重新设计相关的表单组件。
 2024-1 daily
 
 #word
@@ -204,6 +326,17 @@ n. 展览，陈列；表演；（计算机屏幕上的）显示，显示器；�
 **Sentences**:
 *Everyone is relatively introverted, and there aren't many talents on display.*
 每个人都是相对内向的，没有太多的天赋可以展示。
+2024-1 daily
+
+#word
+#### due
+?
+adj. 到期的，预期的；应有的，应得的；应付的，应给的；适当的
+adv. 正对着
+n. 应得，所得；会费
+**Sentences**:
+*Due to the server breach, many tasks couldn't be completed, so I basically idled for the day.*
+由于服务器被攻破，很多任务无法完成，所以我这一天基本上都是无所事事。
 2024-1 daily
 
 #word
@@ -269,6 +402,15 @@ v. 经历，遭遇；体会到，感受到（experience 的过去式和过去分
 2024-1 daily
 
 #word
+#### fitness
+?
+n. 健康；（生物体的）环境适度；适合，胜任
+**Sentences**:
+*He shared his plan for the year: focus on work to clear debts and spend the remaining time on fitness.*
+他分享了他今年的计划:专注于工作以偿还债务，剩余的时间用于健身。
+2024-1 daily
+
+#word
 #### found
 ?
 v. 创办，成立；建造，兴建；根据，以……为基础；熔铸，铸造
@@ -307,6 +449,17 @@ After getting up today, received a package, and spent the day playing games with
 **Sentences**:
 *They had a group photo later, but we didn't participate.*
 后来他们拍了一张合影，但我们没有参加。
+2024-1 daily
+
+#word
+#### hacked
+?
+v.
+砍;劈;非法侵入(他人计算机系统);猛踢;
+hack的过去分词和过去式;
+**Sentences**:
+*The company's server was hacked again, and all the data was lost.*
+公司的服务器又被黑客入侵了，所有的数据都丢失了。
 2024-1 daily
 
 #word
@@ -350,6 +503,27 @@ v. 投资；投入（时间或精力）；赋予，授予；<旧>给……穿衣
 2024-1 daily
 
 #word
+#### issue
+?
+n. 议题，争论点；（报纸、杂志等的）期，号；发放，分配；（新股票或邮票等的）发行；子女，后嗣；流出，发出；<旧>结果，后果
+v. 发表，颁布；分发，分配；正式发行；流出，发出；由……产生，由……得出
+[ 复数 issues 第三人称单数 issues 现在分词 issuing 过去式 issued 过去分词 issued ]
+**Sentences**:
+*Discovered that the issue from yesterday was a design problem on my part, and I need to redesign the related form component.*
+发现昨天的问题是我的设计问题，我需要重新设计相关的表单组件。
+2024-1 daily
+
+#word
+#### layout
+?
+n. 布局，设计；版面编排，版面设计；布置的东西，陈列品
+[ 复数 layouts ]
+**Sentences**:
+*When I got home in the evening, I tidied up and rearranged the layout of the house.*
+当我晚上回到家时，我整理并重新安排了房子的布局。
+2024-1 daily
+
+#word
 #### league
 ?
 n. 联盟，同盟；（体育项目）联合会，社团；联赛；级别，水平；里格（旧时长度单位，约等于5公里）
@@ -369,6 +543,35 @@ n. 传说，传奇（legend 的复数）
 2024-1 daily
 
 #word
+#### locally
+?
+adv. 局部地；在本地
+**Sentences**:
+*We had to redeploy everything, but luckily, we still had the code locally; otherwise, we wouldn't know what to do.*
+我们不得不重新部署所有内容，但幸运的是，我们仍然拥有本地代码;否则，我们就不知道该怎么办了。
+2024-1 daily
+
+#word
+#### luckily
+?
+adv. 幸好，侥幸；幸运地
+**Sentences**:
+*We had to redeploy everything, but luckily, we still had the code locally; otherwise, we wouldn't know what to do.*
+我们不得不重新部署所有内容，但幸运的是，我们仍然拥有本地代码;否则，我们就不知道该怎么办了。
+2024-1 daily
+
+#word
+#### match
+?
+n. 比赛，竞赛；火柴；敌手，旗鼓相当的人；相配的人（或物）；非常相似的东西；婚姻，配偶；适合，匹配
+v. 比得上，敌得过；使成对，使相配，使相称；与……一致，与……相符；使较量，使竞赛；适应，满足；等额提供
+[ 复数 matches 第三人称单数 matches 现在分词 matching 过去式 matched 过去分词 matched ]
+**Sentences**:
+*However, the washing machine's interface didn't match, so I had to buy an adapter, which cost 5 yuan.*
+然而，洗衣机的接口不匹配，所以我不得不买了一个适配器，花了5元钱。
+2024-1 daily
+
+#word
 #### matters
 ?
 n. 事项；事件；事态；情事（matter 的复数）
@@ -377,6 +580,26 @@ n. （Matters）马特斯（人名）
 **Sentences**:
 *Discussed some work-related matters, which may lead to some personnel changes.*
 讨论了一些与工作相关的事情，这可能会导致一些人事变动。
+2024-1 daily
+
+#word
+#### mentioned
+?
+v. 提及，说起，谈到（mention 的过去式和过去分词）
+**Sentences**:
+*He mentioned that he was recently scammed out of 40,000 RMB and reported it to the police.*
+他提到，他最近被骗了4万元人民币，并向警方报案。
+2024-1 daily
+
+#word
+#### modifying
+?
+v. 修改，改进；修饰，限定；缓和，使温和；使改形，使转化；变（音）（modify 的现在分词）
+**Sentences**:
+*# 2024-01-11
+#Thursday   #Zhongguancun-Science-Park  #Sunny  
+Worked as usual, spent the whole day modifying the custom form-related table component.*
+与往常一样工作，花了一整天的时间修改与自定义表单相关的表组件。
 2024-1 daily
 
 #word
@@ -430,6 +653,16 @@ adv. 最近；重新；以新的方式
 2024-1 daily
 
 #word
+#### opportunity
+?
+n. 时机，机会
+[ 复数 opportunities ]
+**Sentences**:
+*I took the opportunity to clean and organize the room.*
+我利用这个机会打扫和整理房间。
+2024-1 daily
+
+#word
 #### originally
 ?
 adv. 起初，原来；独创地，新颖地
@@ -438,6 +671,30 @@ adv. 起初，原来；独创地，新颖地
 #Sunday   #East-Ou-Residential-Community   #Cloudy 
 Today, I originally wanted to restrain myself from going to the internet café to play games.*
 # 2024-01-21 #星期日#东欧小区#多云今天，我本来想克制自己不去网吧玩游戏。
+2024-1 daily
+
+#word
+#### otherwise
+?
+adv. 否则，不然；除此以外，在其他方面；不同地，另外地；以其他方式，用别的方法
+adj. 不是那样的，另外情况下的
+**Sentences**:
+*We had to redeploy everything, but luckily, we still had the code locally; otherwise, we wouldn't know what to do.*
+我们不得不重新部署所有内容，但幸运的是，我们仍然拥有本地代码;否则，我们就不知道该怎么办了。
+2024-1 daily
+
+#word
+#### part
+?
+n. 部分；某物的部分（局部）；（书、戏剧、电视剧等的）部，篇，集；（动植物的）器官，部位；部件，零件；成员，参与人员；（世界、国家或城镇等的）区域，地区；（头发的）分缝；（角色的）台词和动作，角色；（在活动或事件中的）作用；（乐器或声音的）声部，音部；（等）份；<古>能力
+v. （使）分开，（使）分离；分别；分手；放弃，移交；给（头发）分缝
+adv. 既有……又有……（part sth., part sth.）；不完全地，部分地
+adj. 部分的，不完全的
+【名】 （Part）(英、瑞典）帕特，（泰）巴，（法）帕尔（人名）
+[ 复数 parts 第三人称单数 parts 现在分词 parting 过去式 parted 过去分词 parted ]
+**Sentences**:
+*Discovered that the issue from yesterday was a design problem on my part, and I need to redesign the related form component.*
+发现昨天的问题是我的设计问题，我需要重新设计相关的表单组件。
 2024-1 daily
 
 #word
@@ -508,6 +765,18 @@ n. <英>燕麦粥，麦片粥；<英，非正式>关押期，监禁期
 2024-1 daily
 
 #word
+#### purchased
+?
+adj. 已经购买的
+v. 购买（purchase 的过去分词）
+**Sentences**:
+*# 2024-01-13
+#Saturday #East-Ou-Residential-Community  #Sunny  
+Today, I was waiting for the arrival of the Haier refrigerator and Xiaomi washing machine I purchased online.*
+今天，我在网上购买了海尔冰箱和小米洗衣机，等待着它们的到来。
+2024-1 daily
+
+#word
 #### quite
 ?
 adv. 相当，很；非常，十分；完全地，彻底地；（用于否定词后面表示某事不完全正确或清楚）不大确切地，差不多；<英>（表示赞同或理解）对，正是；（用于名词词组前，表示强调）出众的，了不起的；<西印度>自始至终，一路上
@@ -527,6 +796,15 @@ adj. 少见的，不常发生的；稀罕的，珍贵的；半熟的，半生的
 #Monday    #Zhongguancun-Science-Park  #snowy
 Normal work today, it snowed, which is quite rare for Wenzhou.*
 今天正常工作，下了雪，这在温州是很少见的。
+2024-1 daily
+
+#word
+#### rearranged
+?
+v. 重新排列，重新整理；重新安排（rearrange 的过去式和过去分词）
+**Sentences**:
+*When I got home in the evening, I tidied up and rearranged the layout of the house.*
+当我晚上回到家时，我整理并重新安排了房子的布局。
 2024-1 daily
 
 #word
@@ -550,12 +828,43 @@ After getting up today, received a package, and spent the day playing games with
 2024-1 daily
 
 #word
+#### recently
+?
+adv. 最近，不久前
+**Sentences**:
+*He mentioned that he was recently scammed out of 40,000 RMB and reported it to the police.*
+他提到，他最近被骗了4万元人民币，并向警方报案。
+2024-1 daily
+
+#word
 #### recharged
 ?
 v. 给（电池等）再充电；（电池等）再充电；再倒满（茶杯等容器）；再灌满；（人）恢复精神（或体力）；再袭击（recharge 的过去式及过去分词）
 **Sentences**:
 *Recharged 100 yuan for internet fees and played until around 7 PM before returning home to rest.*
 充了100元网费，玩到晚上7点左右才回家休息。
+2024-1 daily
+
+#word
+#### redeploy
+?
+vt. 重新部署；调动
+vi. 重新部署
+[ 第三人称单数 redeploys 现在分词 redeploying 过去式 redeployed 过去分词 redeployed ]
+**Sentences**:
+*We had to redeploy everything, but luckily, we still had the code locally; otherwise, we wouldn't know what to do.*
+我们不得不重新部署所有内容，但幸运的是，我们仍然拥有本地代码;否则，我们就不知道该怎么办了。
+2024-1 daily
+
+#word
+#### refrigerator
+?
+n. 冰箱，冷藏库
+**Sentences**:
+*# 2024-01-13
+#Saturday #East-Ou-Residential-Community  #Sunny  
+Today, I was waiting for the arrival of the Haier refrigerator and Xiaomi washing machine I purchased online.*
+今天，我在网上购买了海尔冰箱和小米洗衣机，等待着它们的到来。
 2024-1 daily
 
 #word
@@ -568,6 +877,16 @@ adv. 相当地，相对地
 2024-1 daily
 
 #word
+#### remaining
+?
+adj. 剩下的，遗留的；尚未使用、解决的；尚未发生的
+v. 保持不变；遗留；尚待处理（remain 的现在分词）
+**Sentences**:
+*He shared his plan for the year: focus on work to clear debts and spend the remaining time on fitness.*
+他分享了他今年的计划:专注于工作以偿还债务，剩余的时间用于健身。
+2024-1 daily
+
+#word
 #### rented
 ?
 adj. 租用的
@@ -575,6 +894,17 @@ v. 租用（rent 的过去式和过去分词）
 **Sentences**:
 *The items I ordered on Pinduoduo arrived; they are all equipment for the newly rented room.*
 我在拼多多上订购的东西到了;这些都是新租房间的设备。
+2024-1 daily
+
+#word
+#### requirements
+?
+n. 要求（requirement 的复数）；调整需要量，必需品
+**Sentences**:
+*# 2024-01-12
+#Friday   #Zhongguancun-Science-Park  #Sunny  
+Normal workday, worked on developing custom form-related requirements.*
+# 2024-01-12 #星期五#中关村科技园#阳光正常工作日，致力于开发自定义表单相关要求。
 2024-1 daily
 
 #word
@@ -589,6 +919,15 @@ Today, I originally wanted to restrain myself from going to the internet café t
 2024-1 daily
 
 #word
+#### retrieving
+?
+v. 取回，索回；检索数据；挽回，找回；收绕钓鱼线；捡起；回忆；（狗）找到并衔回（中枪猎物）（retrieve 的现在分词）
+**Sentences**:
+*Retrieving the money seems unlikely.*
+收回这笔钱似乎不太可能。
+2024-1 daily
+
+#word
 #### salary
 ?
 n. 薪金，薪水
@@ -596,6 +935,34 @@ v. <古> 给……薪金
 **Sentences**:
 *Receive my salary.*
 领取我的薪水。
+2024-1 daily
+
+#word
+#### scammed
+?
+欺诈（scam 的过去式与过去分词形式）
+**Sentences**:
+*He mentioned that he was recently scammed out of 40,000 RMB and reported it to the police.*
+他提到，他最近被骗了4万元人民币，并向警方报案。
+2024-1 daily
+
+#word
+#### seems
+?
+v．似乎，好像：表示外表上的观察或感觉，但不一定是事实。
+**Sentences**:
+*Retrieving the money seems unlikely.*
+收回这笔钱似乎不太可能。
+2024-1 daily
+
+#word
+#### shared
+?
+adj. 分享的，共有的
+v. 共享，合用；分配；共同拥有（某种看法、特质或经历）（share 的过去式和过去分词形式）
+**Sentences**:
+*He shared his plan for the year: focus on work to clear debts and spend the remaining time on fitness.*
+他分享了他今年的计划:专注于工作以偿还债务，剩余的时间用于健身。
 2024-1 daily
 
 #word
@@ -629,6 +996,15 @@ adv. 稍微，轻微地；（指某人身材）纤弱地，瘦小地
 2024-1 daily
 
 #word
+#### smoke-free
+?
+adj. 无烟的；禁止吸烟的
+**Sentences**:
+*He also mentioned he's been smoke-free for 8 days and is determined to quit successfully this time.*
+他还提到他已经戒烟8天了，这次他决心成功戒烟。
+2024-1 daily
+
+#word
 #### sockets
 ?
 n. 插座；插孔；窝，槽，臼（socket 的复数形式）
@@ -636,6 +1012,18 @@ v. 把……装入托座；用棒头位置击打（socket 的第三人称单数�
 **Sentences**:
 *Installed the curtain for the bathroom and the waterproof box for the sockets.*
 安装浴室窗帘和插座防水盒。
+2024-1 daily
+
+#word
+#### spend
+?
+v. 度过，花（时间）；花（钱），花费；消耗，用尽（精力等）
+n. 花费，开销
+n. 预算
+[ 第三人称单数 spends 现在分词 spending 过去式 spent 过去分词 spent ]
+**Sentences**:
+*He shared his plan for the year: focus on work to clear debts and spend the remaining time on fitness.*
+他分享了他今年的计划:专注于工作以偿还债务，剩余的时间用于健身。
 2024-1 daily
 
 #word
@@ -707,6 +1095,15 @@ adj. 美味的；<非正式> 有趣的；<英，非正式> 性感的，迷人的
 2024-1 daily
 
 #word
+#### tidied
+?
+v. 整理（tidy 的过去式和过去分词）
+**Sentences**:
+*When I got home in the evening, I tidied up and rearranged the layout of the house.*
+当我晚上回到家时，我整理并重新安排了房子的布局。
+2024-1 daily
+
+#word
 #### tidy
 ?
 adj. 整洁的，有条理的；（人）爱整洁的，爱整齐的；<非正式>（款额）巨大的；相当好的，令人满意的
@@ -715,6 +1112,17 @@ n. 盛零碎物品的容器；<英>整理，收拾；<美>（椅子靠背的）�
 **Sentences**:
 *The items I ordered online arrived, and I went home at noon to tidy up the room.*
 我在网上订购的东西到了，中午回家收拾房间。
+2024-1 daily
+
+#word
+#### unlikely
+?
+adj. 不大可能发生的；未必真实的，难以相信的； 非心目中的，不大恰当的；不典型的；（两个人或物）不般配的
+adv. 未必
+[ 比较级 unlikelier或more unlikely 最高级 unlikeliest或most unlikely ]
+**Sentences**:
+*Retrieving the money seems unlikely.*
+收回这笔钱似乎不太可能。
 2024-1 daily
 
 #word
@@ -727,6 +1135,17 @@ n. 腰，腰围；（衣服的）腰部，腰身；船腰，飞机机身中部�
 2024-1 daily
 
 #word
+#### washing machine
+?
+洗衣机，洗涤机
+**Sentences**:
+*# 2024-01-13
+#Saturday #East-Ou-Residential-Community  #Sunny  
+Today, I was waiting for the arrival of the Haier refrigerator and Xiaomi washing machine I purchased online.*
+今天，我在网上购买了海尔冰箱和小米洗衣机，等待着它们的到来。
+2024-1 daily
+
+#word
 #### waterproof
 ?
 adj. 防水的，不透水的
@@ -735,6 +1154,19 @@ n. 防水衣物，雨衣
 **Sentences**:
 *Installed the curtain for the bathroom and the waterproof box for the sockets.*
 安装浴室窗帘和插座防水盒。
+2024-1 daily
+
+#word
+#### whole
+?
+adj. 全部的，整个的；完整的，完好无损的；(强调大小或重要性）整个的，全部的；要点，主旨；健全的，健康的
+n. 整体，全部
+adv. 完全地；整个
+**Sentences**:
+*# 2024-01-14
+#Sunday   #East-Ou-Residential-Community  #Sunny  
+This afternoon, I went to the internet café and played games for the whole afternoon.*
+今天下午，我去网吧玩了一下午的游戏。
 2024-1 daily
 
 #word
