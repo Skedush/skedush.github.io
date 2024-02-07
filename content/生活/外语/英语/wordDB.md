@@ -199,9 +199,107 @@ layout,    n. 布局，设计；版面编排，版面设计；布置的东西，
 [ 复数 layouts ]
 arrange,    v. 安排，筹备；整理，布置，排列；改编；商定
 [ 第三人称单数 arranges 现在分词 arranging 过去式 arranged 过去分词 arranged ]
+encountered,    v. 遇到；曾遭遇（encounter 的过去式）
+issues,    n. 议题，问题；债券；争点（issue 的复数）
+v. 发行；分发；流出（issue 的第三人称单数）
+source,    n. 来源，出处；（问题的）原因，根源；消息人士，信息来源；河流源头，发源地；源（代）码；（电子）源极，电源；（技）源
+v. （从某地）获得；找出……的来源
+dependency,    n. 属国；从属；从属物
+modifications,    n. 修改；修饰；变型；条款修订
+solutions,    n. （问题、困难等的）解决办法；（练习或竞赛的）解答，答案；溶液（solution 的复数）
+discuss,    v. 讨论，辩论；详述，论述
+[ 第三人称单数 discusses 现在分词 discussing 过去式 discussed 过去分词 discussed ]
+idling,    adj. （发动机）低速运转的
+n. 游手好闲
+
+rest of the time,    剩余的时间：指在某段时间中除去已经使用或安排的时间之后剩下的时间。
+rebooted,    v．
+1. 重新启动，重启：指计算机或其他电子设备在关闭后重新开启，以便重新加载操作系统或程序。
+2. 重制，翻新：指对原有作品进行重新创作或改编，以便为观众带来新的体验。
+water,    n. 水，雨水；水域，（江、河、湖、海等）大片的水；（某个国家的）领海，海域（waters）；不明朗（或未知的、困难、危险等）局面（waters）；羊水（waters）；（湖、海的）水面；水位；乘船，走水路
+v. 给……浇水，灌溉；给…...水喝，饮（动物）；（风等使眼睛）流泪；流口水；（江河）流经并给（某地区）供水；加水冲淡，稀释
+【名】 （Water）（英）沃特（人名）
+[ 复数 waters 第三人称单数 waters 现在分词 watering 过去式 watered 过去分词 watered ]
+available,    adj. 可用的，可获得的；有空的，有闲暇的；未婚的，单身的
+dumplings,    n. 饺子（dumpling 的复数）
+tv dramas,    电视剧
+couple,    n. 两个，几个；一对夫妇，一对情侣
+v. 加上，结合；（把设备等）连接；形成一双，配成一对；<旧>交配，交媾；（用电磁感应，静电荷或光学通信线路）将（电路元件）耦合
+【名】 （Couple）（法）库普勒（人名）
+[ 复数 couples 第三人称单数 couples 现在分词 coupling 过去式 coupled 过去分词 coupled ]
+wedding,    n. 婚礼，结婚庆典；婚礼的；<英>结婚纪念，结婚纪念日；结合
+v. 结婚，娶，嫁；（使）结合；坚持，专心于（活动、信仰或制度）（wed 的现在分词）
+【名】 （Wedding）（德）韦丁（人名）
+[ 复数 weddings ]
+resides,    居住
+rush,    v. 冲，奔；把（某人或某物）迅速送往；赶紧做，仓促做；催促，使赶紧；（水、液体等）快速流动；（因感到尴尬）某人的脸/面颊涨红；向……猛冲，猛攻；<美>（大学生联谊会通过举办聚会等）招纳，招收（新会员）；办理手续加入（大学生联谊会）；（美橄）突袭（对方队员，尤指枢纽前卫）；（美式橄榄中）跑动带（球）；仓促生产并分发，匆匆出售（rush something out）
+n. （尤指一群人的）冲，奔；（空气、水等）湍流；匆忙，赶紧；（人流或交通的）高峰时间（the rush）；（很多人）争做，急需；迸发的情绪，情绪迸发；（因吸食毒品或因兴奋事物产生的）一阵激动；工作样片（rushes）；灯心草（常用来编筐）；（美橄）突袭对方队员（尤指枢纽前卫）；（美式橄榄球中的）跑动带球；（大学生联谊会的）招新活动；（美国大学生联谊会的）纳新活动（时间）
+【名】 （Rush）（英）拉什（人名）
+[ 复数 rushes 第三人称单数 rushes 现在分词 rushing 过去式 rushed 过去分词 rushed ]
+packed up,    整理行李：将个人物品整理收拾并放入行李箱或其他容器中以便旅行。
+停止，放弃：在事情变得困难时停止或放弃。
+停止工作：指停止正常工作。
+headed,    adj. 有头的；有标题的
+v. 率领（head 的过去分词）；朝向；走在……的前头
+cousin,    n. 堂（表）兄弟，堂（表）姐妹；远房亲戚；兄弟民族（或国家）的人（来自不同国家但文化近似）；相似的人（物）
+[ 复数 cousins ]
+expected,    adj. 预料的，预期的
+v. 期待；预计；要求，指望（expect 的过去式和过去分词）
+customary,    adj. 习俗的，习惯的；特有的，典型的；<法律>按习惯法的，依惯例的；与非洲黑人传统（或法律）有关的
+n. <史>习惯法汇编
+[ 复数 customaries 比较级 more customary 最高级 most customary ]
+dignified,    adj. 庄严的；有尊严的；高贵的
+v. 使高贵（dignify 的过去式）
+brought,    v. 带来（bring 的过去分词）
+among,    prep. 在……当中，周围是；与……在一起；……之一；在……群体中；为……所共有；彼此间；以及
+premeditated,    adj. 预谋的；预先考虑的；经预先计划的
+v. 预谋（premeditate 的过去式和过去分词）；预先考虑
+explanation,    n. 解释，说明；解释性说法，说明性文字；理由，原因
+[ 复数 explanations ]
+absurd,    adj. 愚蠢的，荒谬的；滑稽可笑的；荒诞派的
+n. 荒诞，荒诞的事物 （the absurd）
+[ 比较级 more absurd 最高级 most absurd ]
+meal,    n. 一餐，进餐（时间）；一餐所吃的食物；磨成粗粉的东西
+v. 进餐
+[ 复数 meals ]
+directly,    adv. 直接地，径直地；坦率地；恰好，正好；立即，很快地
+conj. 一……就……
+scheduled,    adj. 预先安排的，按时刻表的；（尤指航班）定期的；<英>（建筑，历史遗迹）列入文物保护单位的
+v. 安排；将……列入计划表（或时间表等）；<英>把（建筑物）列为文物保护单位（schedule 的过去式和过去分词形式）
+delivery,    n. 递送，投递；递送物；演讲风格，演说方式；分娩，生产；投球方式
+adj. 运送的
+[ 复数 deliveries ]
+dormitory,    n. 集体宿舍；<美>（学院或大学的）学生宿舍楼；<英>（为在附近城市里工作的人提供的）住宅城，郊外居住区
+adj. <英>（供在另一个城市工作的人）住宅的
+[ 复数 dormitories ]
+briefly,    adv. 简短地，简要地；短暂地，暂时地
+tidying,    整理
+收拾（tidy 的变体）
+使整齐（tidy 的变体
+met,    v. 遇见（meet 的过去式和过去分词）
+n. （Met）人名；（瑞典）梅特
+female,    adj. 女性的，妇女的；女性特有的；由女性组成的；内孔的；雌性的，母的；雌蕊的
+n. 雌性动物，雌性植物；女子
+[ 复数 females 比较级 more female 最高级 most female ]
+internship,    n. 实习生；实习期；实习医师的职位
+[ 复数 internships ]
+since,    prep. 自……以后，自……以来；（表示气愤）何曾，什么时候
+conj. 在……以后，自……以来；因为，由于，既然
+adv. 自……以后，自……以来；此后，后来
+n. （Since）（法、美）新斯（人名）
+attractive,    adj. 吸引人的，有吸引力的；（人）迷人的，有魅力的；值得考虑的，值得做的；（与）引力（有关）的
+[ 比较级 more attractive 最高级 most attractive ]
+advantages,    n. 有利条件，优势；优点；利益（advantage 的复数）
+v. 有利于，有助于（advantage 的第三人称单数）
+promising,    adj. 有希望的，有前途的
+v. 承诺，答应；使很可能，预示（promise 的现在分词形式）
+contacts,    n. 联系人；联络方式；触体；隐形眼镜（contact的复数形式）
+v. 接触，联系（contact的第三人称单数形式）
+freshened up,    洗漱：为了感觉清洁和清新而洗漱自己。
 
 #### Familiar
-
+remind,    v. 提醒，使想起；（因相像）使联想起（remind sb. of）
+[ 第三人称单数 reminds 现在分词 reminding 过去式 reminded 过去分词 reminded ]
 
 #### Known
 design,    n. 设计，布局，安排；设计艺术，构思；设计图，图纸；图案，花纹；计划，意图
@@ -210,6 +308,7 @@ v. 设计，制图，构思；筹划，制订；预定，指定
 [ 复数 designs 第三人称单数 designs 现在分词 designing 过去式 designed 过去分词 designed ]
 shared,    adj. 分享的，共有的
 v. 共享，合用；分配；共同拥有（某种看法、特质或经历）（share 的过去式和过去分词形式）
+aunt,    n. 姑妈，伯母，舅妈，阿姨，婶婶
 
 #### Learned
 
@@ -416,9 +515,109 @@ n. 布局，设计；版面编排，版面设计；布置的东西，陈列品
 [ 复数 layouts ]  ,  layout
 v. 安排，筹备；整理，布置，排列；改编；商定
 [ 第三人称单数 arranges 现在分词 arranging 过去式 arranged 过去分词 arranged ]  ,  arrange
+v. 遇到；曾遭遇（encounter 的过去式）  ,  encountered
+n. 议题，问题；债券；争点（issue 的复数）
+v. 发行；分发；流出（issue 的第三人称单数）  ,  issues
+n. 来源，出处；（问题的）原因，根源；消息人士，信息来源；河流源头，发源地；源（代）码；（电子）源极，电源；（技）源
+v. （从某地）获得；找出……的来源  ,  source
+n. 属国；从属；从属物  ,  dependency
+n. 修改；修饰；变型；条款修订  ,  modifications
+n. （问题、困难等的）解决办法；（练习或竞赛的）解答，答案；溶液（solution 的复数）  ,  solutions
+v. 讨论，辩论；详述，论述
+[ 第三人称单数 discusses 现在分词 discussing 过去式 discussed 过去分词 discussed ]  ,  discuss
+adj. （发动机）低速运转的
+n. 游手好闲
+  ,  idling
+剩余的时间：指在某段时间中除去已经使用或安排的时间之后剩下的时间。  ,  rest of the time
+v．
+1. 重新启动，重启：指计算机或其他电子设备在关闭后重新开启，以便重新加载操作系统或程序。
+2. 重制，翻新：指对原有作品进行重新创作或改编，以便为观众带来新的体验。  ,  rebooted
+n. 水，雨水；水域，（江、河、湖、海等）大片的水；（某个国家的）领海，海域（waters）；不明朗（或未知的、困难、危险等）局面（waters）；羊水（waters）；（湖、海的）水面；水位；乘船，走水路
+v. 给……浇水，灌溉；给…...水喝，饮（动物）；（风等使眼睛）流泪；流口水；（江河）流经并给（某地区）供水；加水冲淡，稀释
+【名】 （Water）（英）沃特（人名）
+[ 复数 waters 第三人称单数 waters 现在分词 watering 过去式 watered 过去分词 watered ]  ,  water
+adj. 可用的，可获得的；有空的，有闲暇的；未婚的，单身的  ,  available
+n. 饺子（dumpling 的复数）  ,  dumplings
+电视剧  ,  tv dramas
+n. 两个，几个；一对夫妇，一对情侣
+v. 加上，结合；（把设备等）连接；形成一双，配成一对；<旧>交配，交媾；（用电磁感应，静电荷或光学通信线路）将（电路元件）耦合
+【名】 （Couple）（法）库普勒（人名）
+[ 复数 couples 第三人称单数 couples 现在分词 coupling 过去式 coupled 过去分词 coupled ]  ,  couple
+n. 婚礼，结婚庆典；婚礼的；<英>结婚纪念，结婚纪念日；结合
+v. 结婚，娶，嫁；（使）结合；坚持，专心于（活动、信仰或制度）（wed 的现在分词）
+【名】 （Wedding）（德）韦丁（人名）
+[ 复数 weddings ]  ,  wedding
+居住  ,  resides
+v. 冲，奔；把（某人或某物）迅速送往；赶紧做，仓促做；催促，使赶紧；（水、液体等）快速流动；（因感到尴尬）某人的脸/面颊涨红；向……猛冲，猛攻；<美>（大学生联谊会通过举办聚会等）招纳，招收（新会员）；办理手续加入（大学生联谊会）；（美橄）突袭（对方队员，尤指枢纽前卫）；（美式橄榄中）跑动带（球）；仓促生产并分发，匆匆出售（rush something out）
+n. （尤指一群人的）冲，奔；（空气、水等）湍流；匆忙，赶紧；（人流或交通的）高峰时间（the rush）；（很多人）争做，急需；迸发的情绪，情绪迸发；（因吸食毒品或因兴奋事物产生的）一阵激动；工作样片（rushes）；灯心草（常用来编筐）；（美橄）突袭对方队员（尤指枢纽前卫）；（美式橄榄球中的）跑动带球；（大学生联谊会的）招新活动；（美国大学生联谊会的）纳新活动（时间）
+【名】 （Rush）（英）拉什（人名）
+[ 复数 rushes 第三人称单数 rushes 现在分词 rushing 过去式 rushed 过去分词 rushed ]  ,  rush
+整理行李：将个人物品整理收拾并放入行李箱或其他容器中以便旅行。
+停止，放弃：在事情变得困难时停止或放弃。
+停止工作：指停止正常工作。  ,  packed up
+adj. 有头的；有标题的
+v. 率领（head 的过去分词）；朝向；走在……的前头  ,  headed
+n. 堂（表）兄弟，堂（表）姐妹；远房亲戚；兄弟民族（或国家）的人（来自不同国家但文化近似）；相似的人（物）
+[ 复数 cousins ]  ,  cousin
+adj. 预料的，预期的
+v. 期待；预计；要求，指望（expect 的过去式和过去分词）  ,  expected
+adj. 习俗的，习惯的；特有的，典型的；<法律>按习惯法的，依惯例的；与非洲黑人传统（或法律）有关的
+n. <史>习惯法汇编
+[ 复数 customaries 比较级 more customary 最高级 most customary ]  ,  customary
+adj. 庄严的；有尊严的；高贵的
+v. 使高贵（dignify 的过去式）  ,  dignified
+v. 带来（bring 的过去分词）  ,  brought
+prep. 在……当中，周围是；与……在一起；……之一；在……群体中；为……所共有；彼此间；以及  ,  among
+adj. 预谋的；预先考虑的；经预先计划的
+v. 预谋（premeditate 的过去式和过去分词）；预先考虑  ,  premeditated
+n. 解释，说明；解释性说法，说明性文字；理由，原因
+[ 复数 explanations ]  ,  explanation
+adj. 愚蠢的，荒谬的；滑稽可笑的；荒诞派的
+n. 荒诞，荒诞的事物 （the absurd）
+[ 比较级 more absurd 最高级 most absurd ]  ,  absurd
+n. 一餐，进餐（时间）；一餐所吃的食物；磨成粗粉的东西
+v. 进餐
+[ 复数 meals ]  ,  meal
+adv. 直接地，径直地；坦率地；恰好，正好；立即，很快地
+conj. 一……就……  ,  directly
+adj. 预先安排的，按时刻表的；（尤指航班）定期的；<英>（建筑，历史遗迹）列入文物保护单位的
+v. 安排；将……列入计划表（或时间表等）；<英>把（建筑物）列为文物保护单位（schedule 的过去式和过去分词形式）  ,  scheduled
+n. 递送，投递；递送物；演讲风格，演说方式；分娩，生产；投球方式
+adj. 运送的
+[ 复数 deliveries ]  ,  delivery
+n. 集体宿舍；<美>（学院或大学的）学生宿舍楼；<英>（为在附近城市里工作的人提供的）住宅城，郊外居住区
+adj. <英>（供在另一个城市工作的人）住宅的
+[ 复数 dormitories ]  ,  dormitory
+adv. 简短地，简要地；短暂地，暂时地  ,  briefly
+整理
+收拾（tidy 的变体）
+使整齐（tidy 的变体  ,  tidying
+v. 遇见（meet 的过去式和过去分词）
+n. （Met）人名；（瑞典）梅特  ,  met
+adj. 女性的，妇女的；女性特有的；由女性组成的；内孔的；雌性的，母的；雌蕊的
+n. 雌性动物，雌性植物；女子
+[ 复数 females 比较级 more female 最高级 most female ]  ,  female
+n. 实习生；实习期；实习医师的职位
+[ 复数 internships ]  ,  internship
+prep. 自……以后，自……以来；（表示气愤）何曾，什么时候
+conj. 在……以后，自……以来；因为，由于，既然
+adv. 自……以后，自……以来；此后，后来
+n. （Since）（法、美）新斯（人名）  ,  since
+adj. 吸引人的，有吸引力的；（人）迷人的，有魅力的；值得考虑的，值得做的；（与）引力（有关）的
+[ 比较级 more attractive 最高级 most attractive ]  ,  attractive
+n. 有利条件，优势；优点；利益（advantage 的复数）
+v. 有利于，有助于（advantage 的第三人称单数）  ,  advantages
+adj. 有希望的，有前途的
+v. 承诺，答应；使很可能，预示（promise 的现在分词形式）  ,  promising
+n. 联系人；联络方式；触体；隐形眼镜（contact的复数形式）
+v. 接触，联系（contact的第三人称单数形式）  ,  contacts
+洗漱：为了感觉清洁和清新而洗漱自己。  ,  freshened up
+v. 提醒，使想起；（因相像）使联想起（remind sb. of）
+[ 第三人称单数 reminds 现在分词 reminding 过去式 reminded 过去分词 reminded ]  ,  remind
 n. 设计，布局，安排；设计艺术，构思；设计图，图纸；图案，花纹；计划，意图
 v. 设计，制图，构思；筹划，制订；预定，指定
 【名】 （Design）（俄、巴、印）迪赛（人名）
 [ 复数 designs 第三人称单数 designs 现在分词 designing 过去式 designed 过去分词 designed ]  ,  design
 adj. 分享的，共有的
 v. 共享，合用；分配；共同拥有（某种看法、特质或经历）（share 的过去式和过去分词形式）  ,  shared
+n. 姑妈，伯母，舅妈，阿姨，婶婶  ,  aunt
