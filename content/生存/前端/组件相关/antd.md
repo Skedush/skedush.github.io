@@ -1,0 +1,3 @@
+# Cascader
+loadData属性需要与isLeaf或者children属性配合，若是节点无children，isLeaf且没设置为false，则不会触发loadData。
+
