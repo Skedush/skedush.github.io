@@ -59,7 +59,7 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "",
+            "query": "tag:#Wednesday",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -108,7 +108,7 @@
         }
       }
     ],
-    "currentTab": 0
+    "currentTab": 1
   },
   "right": {
     "id": "d1ddbbe15684e06a",
@@ -199,7 +199,7 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "387a951ddb098140",
+  "active": "4b20bd101bfc3643",
   "lastOpenFiles": [
     "content/生而为人我深谢/2024/2024-01.md",
     "content/生而为人我深谢/2024/2024-02.md",
