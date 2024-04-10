@@ -11,11 +11,30 @@
             "id": "17a42e0341430410",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "content/生而为人我深谢/2024/2024-04.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "387a951ddb098140",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/生而为人我深谢/2024/2024-04.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -89,7 +108,7 @@
         }
       }
     ],
-    "currentTab": 5
+    "currentTab": 0
   },
   "right": {
     "id": "d1ddbbe15684e06a",
@@ -101,6 +120,7 @@
         "state": {
           "type": "backlink",
           "state": {
+            "file": "content/生而为人我深谢/2024/2024-04.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -117,6 +137,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
+            "file": "content/生而为人我深谢/2024/2024-04.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -127,7 +148,9 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {}
+          "state": {
+            "file": "content/生而为人我深谢/2024/2024-04.md"
+          }
         }
       },
       {
@@ -176,7 +199,7 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "af8fdf4224d1991a",
+  "active": "387a951ddb098140",
   "lastOpenFiles": [
     "content/生而为人我深谢/2024/2024-01.md",
     "content/生而为人我深谢/2024/2024-02.md",
