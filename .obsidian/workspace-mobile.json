@@ -11,12 +11,9 @@
             "id": "b21439a5c68364ef",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "langr-reading",
               "state": {
-                "file": "content/生而为人我深谢/2023/2023-12.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
+                "file": "content/生而为人我深谢/2024/2024-02.md"
               }
             }
           }
@@ -71,7 +68,9 @@
         "state": {
           "type": "all-properties",
           "state": {
-            "sortOrder": "frequency"
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
           }
         }
       },
@@ -96,7 +95,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "content/生而为人我深谢/2023/2023-12.md",
+            "file": "content/生而为人我深谢/2024/2024-02.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -113,7 +112,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "content/生而为人我深谢/2023/2023-12.md",
+            "file": "content/生而为人我深谢/2024/2024-02.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -125,7 +124,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "content/生而为人我深谢/2023/2023-12.md"
+            "file": "content/生而为人我深谢/2024/2024-02.md"
           }
         }
       },
@@ -136,24 +135,47 @@
           "type": "calendar",
           "state": {}
         }
+      },
+      {
+        "id": "81ea982daa68947c",
+        "type": "leaf",
+        "state": {
+          "type": "review-queue-list-view",
+          "state": {}
+        }
+      },
+      {
+        "id": "ff5070fe249aa05d",
+        "type": "leaf",
+        "state": {
+          "type": "langr-learn-panel",
+          "state": {}
+        }
       }
     ],
-    "currentTab": 0
+    "currentTab": 5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false,
-      "audio-recorder:开始/结束录音": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "audio-recorder:Start/stop recording": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-weread-plugin:Weread": false,
-      "obsidian-excalidraw-plugin:新建绘图文件": false
+      "obsidian-weread-plugin:同步微信读书笔记": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-language-learner:Open word search panel": false,
+      "obsidian-language-learner:Open new word panel": false,
+      "obsidian-language-learner:Open statistics": false,
+      "obsidian-language-learner:Data Panel": false,
+      "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "85f800ed2ab8e1d7",
-  "lastOpenFiles": []
+  "active": "b21439a5c68364ef",
+  "lastOpenFiles": [
+    "content/生而为人我深谢/2023/2023-12.md"
+  ]
 }
