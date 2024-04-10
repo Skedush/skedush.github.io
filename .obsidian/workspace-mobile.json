@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "80e9cdf7b35f96fc",
+        "id": "4c18e802040cbd9a",
         "type": "tabs",
         "children": [
           {
-            "id": "b21439a5c68364ef",
+            "id": "17a42e0341430410",
             "type": "leaf",
             "state": {
-              "type": "langr-reading",
-              "state": {
-                "file": "content/生而为人我深谢/2024/2024-02.md"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -81,9 +79,17 @@
           "type": "bookmarks",
           "state": {}
         }
+      },
+      {
+        "id": "af8fdf4224d1991a",
+        "type": "leaf",
+        "state": {
+          "type": "langr-search-panel",
+          "state": {}
+        }
       }
     ],
-    "currentTab": 0
+    "currentTab": 5
   },
   "right": {
     "id": "d1ddbbe15684e06a",
@@ -95,7 +101,6 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "content/生而为人我深谢/2024/2024-02.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -112,7 +117,6 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "content/生而为人我深谢/2024/2024-02.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -123,9 +127,7 @@
         "type": "leaf",
         "state": {
           "type": "outline",
-          "state": {
-            "file": "content/生而为人我深谢/2024/2024-02.md"
-          }
+          "state": {}
         }
       },
       {
@@ -174,8 +176,10 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "b21439a5c68364ef",
+  "active": "af8fdf4224d1991a",
   "lastOpenFiles": [
+    "content/生而为人我深谢/2024/2024-01.md",
+    "content/生而为人我深谢/2024/2024-02.md",
     "content/生而为人我深谢/2023/2023-12.md"
   ]
 }
