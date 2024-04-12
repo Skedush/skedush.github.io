@@ -19,22 +19,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "387a951ddb098140",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "content/生而为人我深谢/2024/2024-04.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -59,7 +45,7 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "tag:#Wednesday",
+            "query": "",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -108,7 +94,8 @@
         }
       }
     ],
-    "currentTab": 1
+    "currentTab": 0,
+    "pinned": true
   },
   "right": {
     "id": "d1ddbbe15684e06a",
@@ -178,7 +165,8 @@
         }
       }
     ],
-    "currentTab": 5
+    "currentTab": 5,
+    "pinned": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -199,10 +187,12 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "4b20bd101bfc3643",
+  "active": "17a42e0341430410",
   "lastOpenFiles": [
     "content/生而为人我深谢/2024/2024-01.md",
-    "content/生而为人我深谢/2024/2024-02.md",
-    "content/生而为人我深谢/2023/2023-12.md"
+    "content/生而为人我深谢/2024/2024-04.md",
+    "content/生而为人我深谢/2024/2024-03.md",
+    "content/生而为人我深谢/2023/2023-12.md",
+    "content/生而为人我深谢/2024/2024-02.md"
   ]
 }
