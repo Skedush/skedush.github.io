@@ -2708,10 +2708,10 @@ picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.3.1:
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-preact-render-to-string@^6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-6.4.0.tgz#03cdd661d35e9ac76bed9f0e37ccceb42cae5fa5"
-  integrity sha512-pzDwezZaLbK371OiJjXDsZJwVOALzFX5M1wEh2Kr0pEApq5AV6bRH/DFbA/zNA7Lck/duyREPQLLvzu2G6hEQQ==
+preact-render-to-string@^6.4.2:
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-6.4.2.tgz#7f4ccae8d00b243bd27f29824df85f79e6224b3e"
+  integrity sha512-Sio5SvlyZSAXHuvnMgYzVQd67lNIuQe4uSjJ+2gfpJNC6L8zoHQR5xV7B/EjIqrAYWVyJ2eACkTCxVrIzZi6Vw==
   dependencies:
     pretty-format "^3.8.0"
 
