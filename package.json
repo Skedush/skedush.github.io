@@ -2,7 +2,7 @@
   "name": "skedush-blog-tea",
   "description": "🌱 publish your digital garden and notes as a website",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "author": "Skedush",
   "license": "MIT",
