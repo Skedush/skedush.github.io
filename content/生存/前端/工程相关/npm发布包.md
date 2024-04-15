@@ -1,3 +1,10 @@
+- package.json
+```
+...
+'private':false
+...
+```
+
 设置npm registry不能使用镜像
 ```
 npm config set registry https://registry.npmjs.org/
