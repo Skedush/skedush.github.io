@@ -8,7 +8,6 @@ title: 因果现象造化纯粹认知
 - I am not lucky; I don't rely on luck. I create my own luck.
 - ---
 
-
 - **conocimiento**
 ---
 
