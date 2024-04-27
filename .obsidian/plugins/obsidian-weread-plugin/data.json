@@ -14,7 +14,7 @@
     },
     {
       "name": "wr_skey",
-      "value": "fWpOBBCL"
+      "value": "4G0zZNUR"
     },
     {
       "name": "wr_pf",
@@ -46,7 +46,7 @@
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
   "dailyNotesFormat": "YYYY-MM",
-  "lastCookieTime": 1712752153726,
+  "lastCookieTime": 1714237080461,
   "isCookieValid": true,
   "user": "Liii",
   "userVid": "385152191",
@@ -56,5 +56,7 @@
   "fileNameType": "BOOK_NAME-AUTHOR",
   "dailyNotesToggle": false,
   "notesBlacklist": "",
-  "showEmptyChapterTitleToggle": false
+  "showEmptyChapterTitleToggle": false,
+  "convertTags": false,
+  "saveArticleToggle": true
 }
