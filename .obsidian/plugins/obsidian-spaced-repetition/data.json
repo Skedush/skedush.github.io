@@ -40,7 +40,11 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
+<<<<<<< HEAD
   "buryDate": "2024-05-05",
+=======
+  "buryDate": "2024-05-06",
+>>>>>>> bb7bb99 (Mac Mini vault backup: 2024-05-06 08:34:46)
   "buryList": [],
   "historyDeck": null
 }
