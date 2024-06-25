@@ -40,7 +40,11 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
+<<<<<<< HEAD
   "buryDate": "2024-06-11",
+=======
+  "buryDate": "2024-06-26",
+>>>>>>> 08008c6 (Mac Pro vault backup: 2024-06-26 06:09:11)
   "buryList": [],
   "historyDeck": null
 }
