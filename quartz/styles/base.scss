@@ -79,6 +79,11 @@ a {
       border-radius: 0;
       padding: 0;
     }
+    &.tag-link {
+      &::before {
+        content: "#";
+      }
+    }
   }
 
   &.external .external-icon {
@@ -476,6 +481,10 @@ video {
   flex: 1 1 auto;
 }
 
+div:has(> .overflow) {
+  position: relative;
+}
+
 ul.overflow,
 ol.overflow {
   max-height: 250;
@@ -507,4 +516,9 @@ ol.overflow {
   ul {
     padding-left: 1rem;
   }
+}
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
 }
