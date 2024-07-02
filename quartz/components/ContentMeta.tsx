@@ -1,10 +1,10 @@
-import { formatDate, getDate } from "./Date"
-import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
-import readingTime from "reading-time"
-import { classNames } from "../util/lang"
-import { i18n } from "../i18n"
 import { JSX } from "preact"
+import readingTime from "reading-time"
+import { i18n } from "../i18n"
+import { classNames } from "../util/lang"
+import { formatDate, getDate } from "./Date"
 import style from "./styles/contentMeta.scss"
+import { QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
 interface ContentMetaOptions {
   /**
