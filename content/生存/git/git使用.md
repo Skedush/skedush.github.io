@@ -93,3 +93,12 @@ git branch -vv
 ```bash
 git branch -d -r <remote>/<branch>
 ```
+
+
+# 查看git配置
+
+```zsh
+git config --list 
+git config --list --global #全局
+git config --list --local #当前包的配置
+```
