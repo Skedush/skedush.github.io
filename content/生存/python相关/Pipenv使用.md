@@ -37,5 +37,11 @@ $ pip install --user pipenv
 > 这进行了 [用户安装](https://pip.pypa.io/en/stable/user_guide/#user-installs)，以防止破坏任何系统范围的包。如果安装后, shell 中没有 `pipenv`，则需要将 [用户基础目录](https://docs.python.org/3/library/site.html#site.USER_BASE) 的 二进制文件目录添加到 `PATH` 中。
 
 在 Linux 和 macOS 上，您可以通过运行 `python -m site --user-base` 找到 用户基础目录，然后把 `bin` 加到目录末尾。比如，上述命令典型地会打印出 `~/.local` （ `~` 会扩展为您的家目录的绝对路径），然后将 `~/.local/bin` 添加到 `PATH` 中。您可以通过 [修改 ~/.profile](https://stackoverflow.com/a/14638025) 永久地设置 `PATH`。
+```zsh
+export PATH=~/.local/bin:$PATH
+source ~/.bashrc  # 如果你使用的是bash shell
+source ~/.zshrc   # 如果你使用的是zsh shell
+
+```
 
 在 Windows 上，您通过运行 `py -m site --user-site` 找到用户基础目录，然后 将 `site-packages` 替换为 `Scripts`。比如，上述命令可能返回为 `C:\Users\Username\AppData\Roaming\Python36\site-packages`，然后您需要在 `PATH` 中包含 `C:\Users\Username\AppData\Roaming\Python36\Scripts`。 您可以在 [控制面板](https://msdn.microsoft.com/en-us/library/windows/desktop/bb776899(v=vs.85).aspx) 中永久设置用户的 `PATH`。您可能需要登出 `PATH` 更改才能生效。
