@@ -102,16 +102,22 @@ $ pipenv run python main.py
 Your IP is 8.8.8.8
 ```
 
-## 退出虚拟环境
-```zsh
-exit
-```
-
 ## 激活虚拟环境
+
+激活进入该环境后默认python执行的命令都是用虚拟环境中的包环境进行执行
 
 ```zsh
 pipenv shell
 ```
+
+
+## 退出虚拟环境
+
+```zsh
+exit
+```
+退出后若是想要用虚拟环境的包环境执行命令需要加`pipenv run`
+
 
 使用 `$ pipenv run` 可确保您的安装包可用于您的脚本。我们还可以生成一个新的 shell， 确保所有命令都可以使用 `$ pipenv shell` 访问已安装的包。
 
