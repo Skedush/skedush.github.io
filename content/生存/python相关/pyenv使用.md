@@ -30,11 +30,11 @@ source  ~/.zshrc
 ```zsh
 pyenv versions
 pyenv install --list
-pyenv install 3.7.3
-pyenv global 3.7.3 # 全局切换
+pyenv install <version>
+pyenv global <version> # 全局切换
 
 python -V # 验证一下是否切换成功
-pyenv local 3.7.3 # 当前目录及其目录切换
+pyenv local <version> # 当前目录及其目录切换
 python -V # 验证一下是否切换成功
 
 pyenv shell <version> # 当前shell切换版本
@@ -50,5 +50,5 @@ pyevn global system
 
 
 
-pyenv uninstall 3.7.3
+pyenv uninstall <version>
 ```
