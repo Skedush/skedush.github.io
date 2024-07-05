@@ -121,3 +121,9 @@ exit
 
 使用 `$ pipenv run` 可确保您的安装包可用于您的脚本。我们还可以生成一个新的 shell， 确保所有命令都可以使用 `$ pipenv shell` 访问已安装的包。
 
+## 导出requirements.txt
+## 
+```zsh
+pipenv requirements > requirements.txt
+```
+
