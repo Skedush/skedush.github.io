@@ -55,3 +55,63 @@ $ pipenv install requests
 ```
 
 Pipenv 将在您的项目目录中安装超赞的 [Requests](http://docs.python-requests.org/en/master/) 库并为您创建一个 [Pipfile](https://github.com/pypa/pipfile)。 `Pipfile` 用于跟踪您的项目中需要重新安装的依赖，例如在与他人共享项目时。 您应该得到类似的输出（尽管显示的确切路径会有所不同）：
+```zsh
+Using default python from /Users/<yourusername>/.pyenv/versions/3.9.16/bin/python3.9 (3.9.16) to create virtualenv...
+⠼ Creating virtual environment...created virtual environment CPython3.9.16.final.0-64 in 312ms
+  creator CPython3Posix(dest=/Users/<yourusername>/.local/share/virtualenvs/<project_folder>-dBgTcs2D, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/Users/<yourusername>/Library/Application Support/virtualenv)
+    added seed packages: pip==24.1, setuptools==70.1.0, wheel==0.43.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+
+✔ Successfully created virtual environment!
+Virtualenv location: /Users/<yourusername>/.local/share/virtualenvs/<project_folder>-dBgTcs2D
+Creating a Pipfile for this project...
+Installing requests...
+Resolving requests...
+Added requests to Pipfile's [packages] ...
+✔ Installation Succeeded
+Pipfile.lock not found, creating...
+Locking [packages] dependencies...
+Building requirements...
+Resolving dependencies...
+✔ Success!
+Locking [dev-packages] dependencies...
+Updated Pipfile.lock (b8c2e1580c53e383cfe4254c1f16560b855d984fde8b2beb3bf6ee8fc2fe5a22)!
+To activate this project's virtualenv, run pipenv shell.
+Alternatively, run a command inside the virtualenv with pipenv run.
+Installing dependencies from Pipfile.lock (fe5a22)...
+```
+
+### 使用安装好的包
+现在安装了 Requests，您可以创建一个简单的 `main.py` 文件来使用它：
+```python 
+import requests
+
+response = requests.get('https://httpbin.org/ip')
+
+print('Your IP is {0}'.format(response.json()['origin']))
+```
+
+然后您就可以使用 `pipenv run` 运行这段脚本：
+```zsh
+$ pipenv run python main.py
+```
+
+您应该获取到类似的输出：
+```zsh
+Your IP is 8.8.8.8
+```
+
+## 退出虚拟环境
+```zsh
+exit
+```
+
+## 激活虚拟环境
+
+```zsh
+pipenv shell
+```
+
+使用 `$ pipenv run` 可确保您的安装包可用于您的脚本。我们还可以生成一个新的 shell， 确保所有命令都可以使用 `$ pipenv shell` 访问已安装的包。
+
