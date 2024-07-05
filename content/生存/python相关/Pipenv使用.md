@@ -45,3 +45,13 @@ source ~/.zshrc   # 如果你使用的是zsh shell
 ```
 
 在 Windows 上，您通过运行 `py -m site --user-site` 找到用户基础目录，然后 将 `site-packages` 替换为 `Scripts`。比如，上述命令可能返回为 `C:\Users\Username\AppData\Roaming\Python36\site-packages`，然后您需要在 `PATH` 中包含 `C:\Users\Username\AppData\Roaming\Python36\Scripts`。 您可以在 [控制面板](https://msdn.microsoft.com/en-us/library/windows/desktop/bb776899(v=vs.85).aspx) 中永久设置用户的 `PATH`。您可能需要登出 `PATH` 更改才能生效。
+
+### 为您的项目安装包
+
+Pipenv 管理每个项目的依赖关系。要安装软件包时，请更改到您的项目目录并运行：
+```zsh
+$ cd project_folder
+$ pipenv install requests
+```
+
+Pipenv 将在您的项目目录中安装超赞的 [Requests](http://docs.python-requests.org/en/master/) 库并为您创建一个 [Pipfile](https://github.com/pypa/pipfile)。 `Pipfile` 用于跟踪您的项目中需要重新安装的依赖，例如在与他人共享项目时。 您应该得到类似的输出（尽管显示的确切路径会有所不同）：
