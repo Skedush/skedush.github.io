@@ -5,6 +5,8 @@ title: 因果现象造化纯粹认知
 > 夜曲-周杰伦.mp3
 ![[周杰伦 - 夜曲.mp3]]
 
+- 血继限界、异世界、不灭之握、
+
 - I am not lucky; I don't rely on luck. I create my own luck.
 - ---
 
