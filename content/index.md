@@ -5,7 +5,14 @@ title: 因果现象造化纯粹认知
 > 夜曲-周杰伦.mp3
 ![[周杰伦 - 夜曲.mp3]]
 
+- 果然人生最大的分水岭是羊水。
+---
+
+- 没见过猪跑，还没吃过猪肉吗？
+---
+
 - 血继限界、异世界、不灭之握、
+---
 
 - I am not lucky; I don't rely on luck. I create my own luck.
 - ---
