@@ -6,4 +6,6 @@ sudo vim /etc/ssh/sshd_config
 
 
 sudo systemctl restart ssh //重启ssh
+
+ssh-keygen -R 192.168.3.10 //清除连接过的hostskown
 ```
