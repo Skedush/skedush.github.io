@@ -32,20 +32,15 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: public
-
-    
-
-      - name: ssh deploy
-        uses: easingthemes/ssh-deploy@v5.1.0
+      - name: copy file to server
+        uses: appleboy/scp-action@v0.1.7
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-avzr --delete"
-          SOURCE: "public/"
-          SCRIPT_BEFORE: "ls"
-          REMOTE_HOST: ${{ secrets.SERVER_HOST }}
-          REMOTE_PORT: ${{ secrets.SERVER_PORT }}
-          REMOTE_USER: ${{ secrets.SERVER_USERNAME }}
-          TARGET: ${{ secrets.SERVER_PATH }}
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          source: public/*
+          target: ${{ secrets.SERVER_PATH }}
 
 
   deploy:
