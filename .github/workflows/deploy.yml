@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
@@ -33,18 +33,17 @@ jobs:
         with:
           path: public
 
-      - name: Set up SSH
-        uses: webfactory/ssh-agent@v0.5.3
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Copy files via SCP
+      - name: Deploy to server
         env:
-          HOST: ${{ secrets.SERVER_HOST }}
-          USERNAME: ${{ secrets.SERVER_USERNAME }}
-          PORT: ${{ secrets.SERVER_PORT }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  # 使用 GitHub Secrets 中的 SSH 私钥
+          SERVER_USER: ${{ secrets.SERVER_USERNAME }}  # 服务器用户名
+          SERVER_HOST: ${{ secrets.SERVER_HOST }}  # 服务器地址
+          SERVER_PATH: ${{ secrets.SERVER_PATH }}  # 服务器上的目标路径
         run: |
-          scp -r -P $PORT public/* ${USERNAME}@${HOST}:/home/ubuntu/blog
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          scp -r -o StrictHostKeyChecking=no public/* $SERVER_USER@$SERVER_HOST:$SERVER_PATH
 
   deploy:
     needs: build
