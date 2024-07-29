@@ -53,8 +53,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
    ```
 
    如果你使用 RSA，`IdentityFile` 的路径应为 `~/.ssh/id_rsa`。
-这段配置是一个 SSH 配置文件（通常是 `~/.ssh/config`）的部分内容，配置了如何使用 SSH 连接到 GitHub。以下是对每一行的解释：
-
+   
 ```plaintext
 Host github.com
     HostName github.com
@@ -63,20 +62,22 @@ Host github.com
     IdentitiesOnly yes
 ```
 
-3. 保存并关闭文件。
-
-#### **详细解释**
-
- 1. **Host github.com**
-    - 这一行定义了一个 SSH 主机别名。在使用 SSH 时，可以用这个别名来引用实际的主机地址。这里 `github.com` 是主机别名，也即我们希望配置的目标主机。
-5. **HostName github.com**
-    - 这一行指定了实际要连接的主机名。在这个配置中，实际的主机名和别名是相同的，都是 `github.com`。这行的作用是在需要修改目标主机名时，只需修改这一行，而不必修改所有使用 `Host` 别名的地方。
-6. **User git**
-    - 这一行指定了连接到 `github.com` 时使用的用户名。对于 GitHub，通常使用的用户名是 `git`。这是因为在通过 SSH 连接到 GitHub 时，所有操作都是以 `git` 用户的身份进行的。
-7. **IdentityFile ~/.ssh/id_ed25519**
-    - 这一行指定了用于连接的私钥文件路径。在这里，使用的是 `~/.ssh/id_ed25519` 私钥文件。该私钥文件用于认证连接到 `github.com` 的请求。
-8. **IdentitiesOnly yes**
-    - 这一行指定 SSH 只使用配置文件中明确指定的私钥进行身份验证，而不使用 SSH 代理（如 `ssh-agent`）中缓存的其他私钥。这可以防止 SSH 尝试使用其他不相关的私钥进行身份验证。
+> [!详细解释] 
+> **Host github.com**
+> > 这一行定义了一个 SSH 主机别名。在使用 SSH 时，可以用这个别名来引用实际的主机地址。这里 `github.com` 是主机别名，也即我们希望配置的目标主机。
+>
+> **HostName github.com**
+> > 这一行指定了实际要连接的主机名。在这个配置中，实际的主机名和别名是相同的，都是 `github.com`。这行的作用是在需要修改目标主机名时，只需修改这一行，而不必修改所有使用 `Host` 别名的地方。
+> 
+> **User git**
+> > 这一行指定了连接到 `github.com` 时使用的用户名。对于 GitHub，通常使用的用户名是 `git`。这是因为在通过 SSH 连接到 GitHub 时，所有操作都是以 `git` 用户的身份进行的。
+> 
+> **IdentityFile ~/.ssh/id_ed25519**
+> > 这一行指定 SSH 只使用配置文件中明确指定的私钥进行身份验证，而不使用 SSH 代理（如 `ssh-agent`）中缓存的其他私钥。这可以防止 SSH 尝试使用其他不相关的私钥进行身份验证。
+> 
+>  **IdentitiesOnly yes**
+>  > 这一行指定 SSH 只使用配置文件中明确指定的私钥进行身份验证，而不使用 SSH 代理（如 `ssh-agent`）中缓存的其他私钥。这可以防止 SSH 尝试使用其他不相关的私钥进行身份验证。
+>
 
 ### 4. 测试连接
 使用以下命令测试 SSH 连接：
