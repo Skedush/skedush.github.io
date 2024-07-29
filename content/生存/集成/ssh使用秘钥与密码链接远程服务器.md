@@ -1,4 +1,4 @@
-## 在==**服务器**==编辑ssh配置并重启ssh服务
+## 在**<mark style="background: #FF5582A6;">服务器</mark>**编辑ssh配置并重启ssh服务
 ```zsh
 vim /etc/ssh/sshd_config
 
@@ -16,7 +16,7 @@ sudo service ssh restart
 
 ```
 
-## 在==**本地客户端生成**==私钥与公钥
+## 在**<mark style="background: #BBFABBA6;">本地客户端生成</mark>**私钥与公钥
 
 以我本机macOs系统为例
 
@@ -41,7 +41,7 @@ echo "your-public-key-content" >> ~/.ssh/authorized_keys
 
 ```
 
-## 确保 ==**服务器的**==~/.ssh 目录及其内容的权限正确。通常 ~/.ssh 目录的权限为 700，authorized_keys 文件的权限为 600。
+## 确保 **<mark style="background: #FF5582A6;">服务器</mark>**的~/.ssh 目录及其内容的权限正确。通常 ~/.ssh 目录的权限为 700，authorized_keys 文件的权限为 600。
 
 ```zsh
 chmod 700 ~/.ssh
