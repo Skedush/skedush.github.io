@@ -42,6 +42,7 @@ jobs:
           port: ${{ secrets.SERVER_PORT }}
           source: public/*
           target: ${{ secrets.SERVER_PATH }}
+          overwrite: true
           strip_components: 1
 
       - name: executing remote ssh commands using ssh key
@@ -51,7 +52,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SERVER_PORT }}
-          script: ll
+          script: whoami
 
 
   deploy:
