@@ -44,7 +44,7 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: dist
-        # 使用 actions/scp-action@v0.1.7 动作将产物发送到远程服务器。
+        # 使用 appleboy/scp-action@v0.1.7 动作将产物发送到远程服务器。
       - name: copy file to server
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -76,6 +76,7 @@ jobs:
           # 脚本执行命令
           script: ll
 
+# 部署
   deploy:
     needs: build
     environment:
@@ -83,6 +84,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
+	    # 使用 actions/deploy-pages@v2 动作链接云服务器执行脚本。
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
