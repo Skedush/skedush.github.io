@@ -60,7 +60,12 @@ jobs:
           source: public/*
           # 拷贝到服务器的位置
           target: ${{ secrets.SERVER_PATH }}
+          # 覆盖文件
+          overwrite: true
+          # remove the specified number of leading path elements.
+          strip_components: 1
           
+	  # 使用 actions/ssh-action 动作链接云服务器执行脚本。
       - name: executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@v1.0.3
         with:
@@ -68,6 +73,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SERVER_PORT }}
+          # 脚本执行命令
           script: ll
 
   deploy:
