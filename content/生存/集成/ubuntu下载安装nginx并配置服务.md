@@ -1,4 +1,5 @@
 
+## 下载安装
 ### 1. 更新系统（可以忽略）
 
 首先，确保系统包是最新的：
@@ -130,3 +131,52 @@ sudo certbot --nginx
   - 错误日志：`/var/log/nginx/error.log`
 
 通过上述步骤，你可以在 Ubuntu 上成功安装和配置 Nginx，并根据需要进行基本的虚拟主机配置。
+
+## 访问错误
+
+如果 Nginx 出现 "Permission denied" 错误，通常是由于权限设置问题导致的。以下是可能的原因和解决方案：
+
+### 1. **Nginx 用户没有权限访问文件或目录**
+
+Nginx 默认以 `www-data` 用户运行（在一些系统中可能是 `nginx`），该用户需要对配置文件中指定的目录和文件具有适当的访问权限。
+
+#### 解决方法：
+- **检查文件和目录的所有权和权限**：
+  确保 Nginx 有权读取配置文件和内容文件（例如网页、静态文件等）。
+
+  ```bash
+  sudo chown -R www-data:www-data /path/to/your/web/root
+  sudo chmod -R 755 /path/to/your/web/root
+  ```
+
+  其中 `/path/to/your/web/root` 是你的 Web 根目录或文件所在路径。
+
+- **检查 Nginx 配置文件**：
+  确保 Nginx 配置文件中没有指向不存在的文件或没有权限访问的路径。
+
+```bash
+	sudo nginx -t
+```
+
+  这条命令可以检查 Nginx 配置文件的语法错误，并报告问题。
+### 2. **Nginx 运行用户的问题**
+
+Nginx 可能尝试以 root 用户启动，但配置文件中设置了不同的用户。
+
+#### 解决方法：
+- **检查 Nginx 配置文件中的 `user` 指令**：
+
+  确保 `user` 指令中指定的用户与系统中的用户匹配，并且该用户有足够的权限。
+  配置文件中查看修改用户：
+
+```nginx
+user www-data; #可以改成root或者你自己使用的账户然后重启nginx
+```
+
+```bash
+	sudo nginx -t
+	sudo nginx -s reload
+```
+### 总结
+
+请根据具体的错误日志和环境设置逐步排查问题，通常可以通过查看 `/var/log/nginx/error.log` 文件中的详细错误信息来确定问题的根本原因。
