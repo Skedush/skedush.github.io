@@ -12,7 +12,7 @@ const fetchData = async () => {
 		"prompt_name": "default"  //默认传空为default  
 	};
     try {
-      const url = 'http://41.212.21.70:17777/api/langchain/chat/v1/zj-kb-chat';
+      const url = 'http://[服务地址]/api/v1/chat';
       // const searchHistoryTmp = cloneDeep(nowChat);
       // searchHistoryTmp.sessionId = '5ef0ff061c5642778f7f2d19f39b741b';
       const response = await fetch(url, {
