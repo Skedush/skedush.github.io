@@ -3,9 +3,7 @@
     "flashcardEasyText": "Easy",
     "flashcardGoodText": "Good",
     "flashcardHardText": "Hard",
-    "flashcardTags": [
-      "#flashcards"
-    ],
+    "flashcardTags": ["#flashcards"],
     "convertFoldersToDecks": false,
     "cardCommentOnSameLine": false,
     "burySiblingCards": false,
@@ -24,9 +22,7 @@
     "multilineReversedCardSeparator": "??",
     "editLaterTag": "#edit-later",
     "enableNoteReviewPaneOnStartup": true,
-    "tagsToReview": [
-      "#review"
-    ],
+    "tagsToReview": ["#review"],
     "noteFoldersToIgnore": [],
     "openRandomNote": false,
     "autoNextNote": false,
@@ -40,7 +36,7 @@
     "maxLinkFactor": 1,
     "showDebugMessages": false
   },
-  "buryDate": "2025-02-04",
+  "buryDate": "2025-02-05",
   "buryList": [],
   "historyDeck": null
 }
