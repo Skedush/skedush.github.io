@@ -8,9 +8,9 @@
   "quickadd",
   "obsidian-icons-plugin",
   "obsidian-annotator",
-  "obsidian-weread-plugin",
   "highlightr-plugin",
   "obsidian-language-learner",
   "obsidian-spaced-repetition",
-  "mousewheel-image-zoom"
+  "mousewheel-image-zoom",
+  "obsidian-weread-plugin"
 ]
