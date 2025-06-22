@@ -106,7 +106,7 @@
   "devMode": false,
   "templateFolderPath": "content/assets/template",
   "announceUpdates": true,
-  "version": "1.11.5",
+  "version": "1.15.0",
   "disableOnlineFeatures": true,
   "enableRibbonIcon": false,
   "ai": {
