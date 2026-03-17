@@ -28,11 +28,16 @@ Corepack 是 **Node 自带工具**，只要 Node ≥ 16.10 即可。
 
 ### 1️⃣ 使用稳定版 Yarn（推荐）
 
-`yarn set version stable`
+
+```
+yarn set version stable
+```
 
 或指定版本（例如 Yarn 4）：
 
-`yarn set version 4.5.0`
+```
+yarn set version 4.5.0
+```
 
 执行后会发生三件事（非常重要）：
 
