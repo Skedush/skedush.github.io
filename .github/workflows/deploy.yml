@@ -52,17 +52,18 @@ jobs:
         with:
           path: public
 
-      - name: rsync files to server
-        uses: burnett01/rsync-deployments@5.2
+      - name: copy file to server
+        uses: appleboy/scp-action@v0.1.7
+        timeout-minutes: 30
         with:
-          hosts: "${{ secrets.SERVER_HOST }}"
-          user: "${{ secrets.SERVER_USERNAME }}"
-          key: "${{ secrets.SSH_PRIVATE_KEY }}"
-          port: "${{ secrets.SERVER_PORT }}"
-          source: "./public/"
-          target: "${{ secrets.SERVER_PATH }}"
-          args: "--recursive --compress --delete --omit-dir-times"
-          timeout: 30
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SERVER_PORT }}
+          source: public/*
+          target: ${{ secrets.SERVER_PATH }}
+          strip_components: 1
+          tar: false
 
       - name: Verify server
         uses: appleboy/ssh-action@v1.0.3
