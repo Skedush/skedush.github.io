@@ -61,9 +61,9 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SERVER_PORT }}
           source: public/*
+          overwrite: true
           target: ${{ secrets.SERVER_PATH }}
           strip_components: 1
-          tar: false
 
       - name: Verify server
         uses: appleboy/ssh-action@v1.0.3
