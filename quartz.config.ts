@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     analytics: {
       provider: "plausible",
     },
-    baseUrl: "skedush.xyz",
+    baseUrl: "zzzxc.com",
     locale: "en-US",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
