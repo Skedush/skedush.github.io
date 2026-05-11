@@ -71,9 +71,6 @@ jobs:
               -e "ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no" \
               ./public/ \
               ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/
-            echo "Updating manifest on server..."
-            scp -P ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no .local_manifest.txt \
-              ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/.manifest
             echo "Deployment complete"
           fi
 
