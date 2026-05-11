@@ -84,11 +84,16 @@ jobs:
             echo "=== First 10 changed files ==="
             diff .local_manifest.txt .remote_manifest.txt | grep "^<" | head -10
             echo "Changes detected, uploading..."
-            rsync -avz --checksum --stats --delete \
-              -e "ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no" \
+            rsync -rlvz \
+              --checksum \
+              --delete \
+              --stats \
               --itemize-changes \
+              --human-readable \
+              --info=progress2 \
+              -e "ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no" \
               ./public/ \
-              ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/ | head -60
+              ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/
             echo "=== Update remote manifest ==="
             ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "mkdir -p ${{ secrets.SERVER_PATH }}"
             scp -P ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no .local_manifest.txt ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/.manifest
