@@ -59,12 +59,10 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           echo "=== Generating local manifest ==="
           find ./public/ -type f -exec md5sum {} \; | sort > .local_manifest.txt
-          head -20 .local_manifest.txt
+          head -5 .local_manifest.txt
           echo "=== Remote manifest ==="
-          ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "cat ${{ secrets.SERVER_PATH }}/.manifest" 2>/dev/null > .remote_manifest.txt || echo "" > .remote_manifest.txt
-          head -20 .remote_manifest.txt
-          echo "=== Files with changed checksums ==="
-          diff .local_manifest.txt .remote_manifest.txt | grep "^<" | head -30 || echo "No changed files found"
+          ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "cat ${{ secrets.SERVER_PATH }}/.manifest 2>/dev/null || echo 'Manifest not found'" > .remote_manifest.txt
+          head -5 .remote_manifest.txt
           echo "=== File count comparison ==="
           echo "Local files: $(wc -l < .local_manifest.txt)"
           echo "Remote files: $(wc -l < .remote_manifest.txt)"
@@ -72,15 +70,17 @@ jobs:
             echo "No changes detected, skipping upload"
           else
             echo "=== Files to be transferred ==="
-            diff .local_manifest.txt .remote_manifest.txt | grep "^<" | awk '{print $2}' | head -30
+            diff .local_manifest.txt .remote_manifest.txt | grep "^<" | awk '{print $2}' | wc -l
             echo "Changes detected, uploading..."
             rsync -avz --checksum --stats --delete \
               -e "ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no" \
-              --itemize-changes \
               ./public/ \
-              ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/ | head -80
+              ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/
             echo "=== Update remote manifest ==="
+            ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "mkdir -p ${{ secrets.SERVER_PATH }}"
             scp -P ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no .local_manifest.txt ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/.manifest
+            echo "=== Verify manifest upload ==="
+            ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "wc -l ${{ secrets.SERVER_PATH }}/.manifest"
             echo "Deployment complete"
           fi
 
