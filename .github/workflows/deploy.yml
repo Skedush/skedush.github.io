@@ -53,19 +53,21 @@ jobs:
           path: public
 
       - name: Deploy to server
-        run: |
+        run:  |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           echo "=== Generating local manifest ==="
           find ./public/ -type f -exec md5sum {} \; | sort > .local_manifest.txt
-          echo "=== Checking remote manifest ==="
+          echo "=== Remote manifest ==="
           ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "cat ${{ secrets.SERVER_PATH }}/.manifest" 2>/dev/null > .remote_manifest.txt || echo "" > .remote_manifest.txt
+          echo "=== Manifest diff ==="
+          diff .local_manifest.txt .remote_manifest.txt || true
           if diff .local_manifest.txt .remote_manifest.txt > /dev/null 2>&1; then
             echo "No changes detected, skipping upload"
           else
             echo "Changes detected, uploading..."
-            rsync -avz --checksum \
+            rsync -avz --checksum --stats \
               -e "ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no" \
               ./public/ \
               ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/
