@@ -67,8 +67,9 @@ jobs:
             echo "No changes detected, skipping upload"
           else
             echo "Changes detected, uploading..."
-            rsync -avz --checksum --stats \
+            rsync -avz --checksum --stats --delete \
               -e "ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no" \
+              --itemize-changes \
               ./public/ \
               ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/
             echo "Deployment complete"
