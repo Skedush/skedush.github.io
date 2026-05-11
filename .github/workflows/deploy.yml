@@ -53,54 +53,16 @@ jobs:
           path: public
 
       - name: Deploy to server
-        run:  |
+        run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          echo "=== Generating local manifest ==="
-          find ./public/ -type f -exec md5sum {} \; | sort > .local_manifest.txt
-          echo "Local manifest generated: $(wc -l < .local_manifest.txt) files"
           
-          echo "=== Check remote manifest existence ==="
-          ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "ls -la ${{ secrets.SERVER_PATH }}/.manifest 2>/dev/null || echo 'Manifest does not exist'"
-          
-          echo "=== Remote manifest ==="
-          ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "cat ${{ secrets.SERVER_PATH }}/.manifest 2>/dev/null" > .remote_manifest.txt
-          remote_count=$(wc -l < .remote_manifest.txt)
-          echo "Remote manifest has $remote_count files"
-          
-          echo "=== File count comparison ==="
-          local_count=$(wc -l < .local_manifest.txt)
-          echo "Local files: $local_count"
-          echo "Remote files: $remote_count"
-          
-          echo "=== Check manifest diff ==="
-          changed_files=$(diff .local_manifest.txt .remote_manifest.txt | grep "^<" | wc -l)
-          echo "Files with changed checksums: $changed_files"
-          
-          if [ "$changed_files" -eq 0 ]; then
-            echo "No changes detected, skipping upload"
-          else
-            echo "=== First 10 changed files ==="
-            diff .local_manifest.txt .remote_manifest.txt | grep "^<" | head -10
-            echo "Changes detected, uploading..."
-            rsync -rlvz \
-              --checksum \
-              --delete \
-              --stats \
-              --itemize-changes \
-              --human-readable \
-              --info=progress2 \
-              -e "ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no" \
-              ./public/ \
-              ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/
-            echo "=== Update remote manifest ==="
-            ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "mkdir -p ${{ secrets.SERVER_PATH }}"
-            scp -P ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no .local_manifest.txt ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/.manifest
-            echo "=== Verify manifest upload ==="
-            ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "wc -l ${{ secrets.SERVER_PATH }}/.manifest"
-            echo "Deployment complete"
-          fi
+          echo "Deploying to server..."
+          rsync -avz --checksum --delete --stats \
+            -e "ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no" \
+            ./public/ \
+            ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/
 
       - name: Verify server
         uses: appleboy/ssh-action@v1.0.3
