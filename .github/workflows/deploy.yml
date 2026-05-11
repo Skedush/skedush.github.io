@@ -59,19 +59,28 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           echo "=== Generating local manifest ==="
           find ./public/ -type f -exec md5sum {} \; | sort > .local_manifest.txt
+          head -20 .local_manifest.txt
           echo "=== Remote manifest ==="
           ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "cat ${{ secrets.SERVER_PATH }}/.manifest" 2>/dev/null > .remote_manifest.txt || echo "" > .remote_manifest.txt
-          echo "=== Manifest diff ==="
-          diff .local_manifest.txt .remote_manifest.txt || true
+          head -20 .remote_manifest.txt
+          echo "=== Files with changed checksums ==="
+          diff .local_manifest.txt .remote_manifest.txt | grep "^<" | head -30 || echo "No changed files found"
+          echo "=== File count comparison ==="
+          echo "Local files: $(wc -l < .local_manifest.txt)"
+          echo "Remote files: $(wc -l < .remote_manifest.txt)"
           if diff .local_manifest.txt .remote_manifest.txt > /dev/null 2>&1; then
             echo "No changes detected, skipping upload"
           else
+            echo "=== Files to be transferred ==="
+            diff .local_manifest.txt .remote_manifest.txt | grep "^<" | awk '{print $2}' | head -30
             echo "Changes detected, uploading..."
             rsync -avz --checksum --stats --delete \
               -e "ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no" \
               --itemize-changes \
               ./public/ \
-              ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/
+              ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/ | head -80
+            echo "=== Update remote manifest ==="
+            scp -P ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no .local_manifest.txt ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/.manifest
             echo "Deployment complete"
           fi
 
