@@ -60,20 +60,17 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SERVER_PORT || 22 }}
           script: |
-            mkdir -p ~/.ssh
-            cat ~/.ssh/id_rsa 2>/dev/null || echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa && chmod 600 ~/.ssh/id_rsa
+            echo "=== Current directory ==="
+            pwd
+            ls -la
             echo "=== Checking for changes ==="
             cat ${{ secrets.SERVER_PATH }}/.manifest 2>/dev/null > /tmp/remote_manifest.txt || echo "" > /tmp/remote_manifest.txt
-            if diff /tmp/remote_manifest.txt /github/workspace/.local_manifest.txt > /dev/null 2>&1; then
+            if diff /tmp/remote_manifest.txt .local_manifest.txt > /dev/null 2>&1; then
               echo "No changes detected, skipping upload"
             else
               echo "Changes detected, uploading..."
-              rsync -avz --checksum \
-                -e "ssh -o StrictHostKeyChecking=no" \
-                /github/workspace/public/ \
-                ${{ secrets.SERVER_PATH }}/
-              echo "Updating manifest..."
-              cp /github/workspace/.local_manifest.txt ${{ secrets.SERVER_PATH }}/.manifest
+              rsync -avz --checksum -e "ssh -o StrictHostKeyChecking=no" ./public/ ${{ secrets.SERVER_PATH }}/
+              cp .local_manifest.txt ${{ secrets.SERVER_PATH }}/.manifest
               echo "Deployment complete"
             fi
 
