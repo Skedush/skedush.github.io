@@ -72,7 +72,7 @@ jobs:
             echo "=== Files to be transferred ==="
             diff .local_manifest.txt .remote_manifest.txt | grep "^<" | awk '{print $2}' | wc -l
             echo "Changes detected, uploading..."
-            rsync -avz --checksum --no-times --stats --delete \
+            rsync -avz --checksum --update --stats --delete \
               -e "ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no" \
               ./public/ \
               ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/
