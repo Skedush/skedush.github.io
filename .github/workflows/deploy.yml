@@ -60,18 +60,17 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SERVER_PORT || 22 }}
           script: |
-            echo "=== Current directory ==="
-            cd ${{ secrets.SERVER_PATH }}
-            pwd
-            ls -la
             echo "=== Checking for changes ==="
-            cat ${{ secrets.SERVER_PATH }}/.manifest 2>/dev/null > /tmp/remote_manifest.txt || echo "" > /tmp/remote_manifest.txt
-            if diff /tmp/remote_manifest.txt .local_manifest.txt > /dev/null 2>&1; then
+            cat .manifest 2>/dev/null > /tmp/remote_manifest.txt || echo "" > /tmp/remote_manifest.txt
+            echo "=== Generating local manifest ==="
+            find ./public/ -type f -exec md5sum {} \; | sort > /tmp/local_manifest.txt
+            if diff /tmp/local_manifest.txt /tmp/remote_manifest.txt > /dev/null 2>&1; then
               echo "No changes detected, skipping upload"
             else
               echo "Changes detected, uploading..."
-              rsync -avz --checksum -e "ssh -o StrictHostKeyChecking=no" ./public/ ${{ secrets.SERVER_PATH }}/
-              cp .local_manifest.txt ${{ secrets.SERVER_PATH }}/.manifest
+              rsync -avz --checksum -e "ssh -o StrictHostKeyChecking=no" ./public/* ./
+              echo "Updating manifest..."
+              cp /tmp/local_manifest.txt .manifest
               echo "Deployment complete"
             fi
 
