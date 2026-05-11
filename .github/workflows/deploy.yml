@@ -53,26 +53,27 @@ jobs:
           path: public
 
       - name: Deploy to server
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SERVER_PORT || 22 }}
-          script: |
-            echo "=== Checking for changes ==="
-            cat .manifest 2>/dev/null > /tmp/remote_manifest.txt || echo "" > /tmp/remote_manifest.txt
-            echo "=== Generating local manifest ==="
-            find ./public/ -type f -exec md5sum {} \; | sort > /tmp/local_manifest.txt
-            if diff /tmp/local_manifest.txt /tmp/remote_manifest.txt > /dev/null 2>&1; then
-              echo "No changes detected, skipping upload"
-            else
-              echo "Changes detected, uploading..."
-              rsync -avz --checksum -e "ssh -o StrictHostKeyChecking=no" ./public/* ./
-              echo "Updating manifest..."
-              cp /tmp/local_manifest.txt .manifest
-              echo "Deployment complete"
-            fi
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo "=== Generating local manifest ==="
+          find ./public/ -type f -exec md5sum {} \; | sort > .local_manifest.txt
+          echo "=== Checking remote manifest ==="
+          ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }} "cat ${{ secrets.SERVER_PATH }}/.manifest" 2>/dev/null > .remote_manifest.txt || echo "" > .remote_manifest.txt
+          if diff .local_manifest.txt .remote_manifest.txt > /dev/null 2>&1; then
+            echo "No changes detected, skipping upload"
+          else
+            echo "Changes detected, uploading..."
+            rsync -avz --checksum \
+              -e "ssh -p ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no" \
+              ./public/ \
+              ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/
+            echo "Updating manifest on server..."
+            scp -P ${{ secrets.SERVER_PORT }} -o StrictHostKeyChecking=no .local_manifest.txt \
+              ${{ secrets.SERVER_USERNAME }}@${{ secrets.SERVER_HOST }}:${{ secrets.SERVER_PATH }}/.manifest
+            echo "Deployment complete"
+          fi
 
       - name: Verify server
         uses: appleboy/ssh-action@v1.0.3
