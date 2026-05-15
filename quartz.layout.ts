@@ -33,7 +33,6 @@ export const defaultContentPageLayout: PageLayout = {
         limit: 5,
       }),
     ),
-    // 目录，排除了"生而为人我深谢"下的目录
     Component.DesktopOnly(
       Component.Explorer({
         title: "CONOCIMIENTO",

@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     },
     baseUrl: "zzzxc.com",
     locale: "en-US",
-    ignorePatterns: ["private", "templates", ".obsidian", "**/生而为人我深谢/**"],
+    ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
