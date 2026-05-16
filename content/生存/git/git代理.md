@@ -14,3 +14,28 @@ git config --global https.https://github.com.proxy http://127.0.0.1:7890
 
 ```
 
+## 给 GitHub SSH 配 SOCKS5 代理
+
+在 `ai` 用户里执行：
+
+```
+mkdir -p ~/.sshchmod 700 ~/.sshnano ~/.ssh/config
+```
+
+加入：
+
+```
+Host github.com    HostName github.com    User git    Port 22    ProxyCommand nc -X 5 -x 127.0.0.1:7891 %h %p
+```
+
+保存后设置权限：
+
+```
+chmod 600 ~/.ssh/config
+```
+
+测试：
+
+```
+ssh -T git@github.com
+```
