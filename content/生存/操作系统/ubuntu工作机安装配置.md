@@ -61,7 +61,7 @@ Primary GPU: PEG / PCIe GPU
 |`/srv` 或 `/srv/ai`|700GB+|
 |swap|32–64GB|
 |EFI|默认即可|
-
+b
 如果已装好系统，不必重装，直接创建目录：
 
 ```bash
