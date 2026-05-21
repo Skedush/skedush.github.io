@@ -1,110 +1,236 @@
-下面按 **稳定、隔离、可回滚** 的 AI 工作站方案配置。你的核心限制不是 CPU 或内存，而是 **RTX 5060 8GB 显存**：适合本地 4B/7B/8B 量化模型、embedding、RAG、小规模 LoRA；不适合指望本地流畅跑 32B/70B 或大模型训练。
-
-## 0. 总体架构建议
-
-|层级|推荐做法|原因|
-|---|---|---|
-|宿主机|Ubuntu 26.04 + NVIDIA 驱动 + Docker + NVIDIA Container Toolkit|宿主机只放底座，减少污染|
-|AI 用户|单独建 `ai` 用户|把日常桌面用户和 AI/agent 环境隔离|
-|项目环境|每个项目一个 Docker/Compose 或 `.venv`|可复现、可删除、可迁移|
-|Python|优先 `uv`/venv；不要全局 `pip install`|避免依赖互相污染|
-|LLM 推理|Ollama / llama.cpp / vLLM 按场景分开|8GB 显存需要量化和轻量推理|
-|Agent|容器内运行 Codex/OpenCode/自写 agent|避免 agent 读写整个 `$HOME`|
-
-Ubuntu 26.04 LTS 已正式发布，官方支持到 2031 年 4 月；Canonical 也说明 26.04 开始在发行版仓库中分发 NVIDIA CUDA，适合作为 AI/ML 工作站底座。([Ubuntu Documentation](https://documentation.ubuntu.com/release-notes/26.04/ "Ubuntu 26.04 LTS release notes - Ubuntu release notes"))
+下面是合并后的 **最终最佳实践安装配置流程**。  
+前提：**清空 1TB SSD，单系统安装 Ubuntu 26.04 Desktop，不保留 Windows**。如果你要双系统，这套分区方案要改。
 
 ---
 
-## 1. BIOS / UEFI 设置
+# 0. 最终架构
 
-开机进 BIOS，建议：
+你的机器：
 
 ```text
-XMP / EXPO: 开启 DDR5 6400
-Resizable BAR: 开启
-Above 4G Decoding: 开启
-VT-x / VT-d: 开启
-Secure Boot: 建议先关闭，等 NVIDIA 驱动稳定后再考虑 MOK 签名
-Primary GPU: PEG / PCIe GPU
+RTX 5060 8GB
+Intel Ultra 7 265K
+DDR5 6400 32GB
+1TB SSD
+Ubuntu 26.04 Desktop
 ```
 
-`Ultra 7 265K + RTX 5060` 的 AI 主力是 NVIDIA GPU；Intel NPU/iGPU 可以以后再折腾 OpenVINO，不建议一开始把 NPU 作为主路径。
+推荐工作站架构：
+
+```text
+Ubuntu 宿主机
+├── NVIDIA Driver
+├── Docker Engine
+├── NVIDIA Container Toolkit
+├── ai 独立用户
+│   ├── mise        管 Python / Node / Go / Rust / uv / pnpm / CLI 工具版本
+│   ├── uv          管 Python 项目依赖、venv、lockfile
+│   ├── Docker      跑 Ollama / Qdrant / Postgres / Open WebUI / vLLM
+│   └── /srv/ai     放模型、项目、数据、缓存
+└── 日常用户         用于桌面、浏览器、IDE
+```
+
+核心原则：
+
+```text
+宿主机保持干净
+AI 服务 Docker 化
+开发工具 mise 管
+Python 项目 uv 管
+agent 只访问单个项目目录
+模型、缓存、数据库全部放 /srv/ai
+```
 
 ---
 
-## 2. 磁盘布局建议：1TB SSD
+# 1. 安装前准备
 
-推荐目录：
+## 1.1 下载 Ubuntu 26.04 Desktop ISO
+
+下载 Ubuntu 26.04 LTS Desktop ISO，制作启动 U 盘。Ubuntu 官方桌面安装文档支持手动分区，适合你这种需要 `/srv/ai` 独立数据区的工作站配置。([Ubuntu 文档](https://documentation.ubuntu.com/desktop/en/latest/tutorial/install-ubuntu-desktop/?utm_source=chatgpt.com "Install Ubuntu Desktop"))
+
+Windows 制作启动盘建议：
+
+```text
+Rufus
+Partition scheme: GPT
+Target system: UEFI
+File system: FAT32
+Write mode: ISO mode
+```
+
+Linux/macOS 可用：
+
+```text
+balenaEtcher
+Ubuntu Startup Disk Creator
+dd
+```
+
+---
+
+# 2. BIOS / UEFI 设置
+
+进 BIOS，一般按：
+
+```text
+DEL / F2
+```
+
+建议设置：
+
+```text
+Boot Mode: UEFI Only
+CSM: Disabled
+Secure Boot: Disabled
+Resizable BAR: Enabled
+Above 4G Decoding: Enabled
+Intel VT-x: Enabled
+Intel VT-d: Enabled
+XMP / EXPO: Enabled
+Primary Display: PCIe / PEG
+```
+
+说明：
+
+```text
+Secure Boot 先关闭，避免 NVIDIA 驱动签名/MOK 问题
+Resizable BAR 和 Above 4G Decoding 对新显卡更友好
+VT-x / VT-d 后续方便容器、虚拟化、沙箱
+```
+
+---
+
+# 3. 分区方案
+
+1TB SSD 推荐这样分：
+
+|分区|大小|文件系统|挂载点|用途|
+|---|--:|---|---|---|
+|EFI|1GB|FAT32|`/boot/efi`|UEFI 启动|
+|root|150GB|ext4|`/`|系统、驱动、基础工具|
+|swap|64GB|swap|无|内存缓冲|
+|home|120GB|ext4|`/home`|日常用户配置|
+|ai-data|剩余全部|ext4|`/srv/ai`|模型、数据、项目、缓存|
+|docker-data|不单独分区|目录|`/srv/docker`|Docker 镜像和容器层|
+
+最终大约：
+
+```text
+/dev/nvme0n1p1   1GB      FAT32   /boot/efi
+/dev/nvme0n1p2   150GB    ext4    /
+/dev/nvme0n1p3   64GB     swap
+/dev/nvme0n1p4   120GB    ext4    /home
+/dev/nvme0n1p5   ~696GB   ext4    /srv/ai
+```
+
+为什么这样分：
+
+```text
+/ 不容易被 Docker 和模型撑爆
+/home 和 AI 数据分离
+/srv/ai 可以保留或单独备份
+swap 不能替代显存，但能防止内存爆掉时系统直接死机
+```
+
+---
+
+# 4. 安装 Ubuntu
+
+启动 U 盘后：
+
+```text
+Install Ubuntu
+→ 选择语言
+→ 连接网络
+→ 勾选第三方驱动/媒体支持
+→ 选择 Manual partitioning
+```
+
+手动创建上面的分区。
+
+用户创建建议：
+
+```text
+Username: zzzxc
+Computer name: ai-workstation
+```
+
+不要把第一个用户叫 `ai`。  
+后面我们会单独创建一个隔离的 `ai` 用户。
+
+安装完成后重启，拔掉 U 盘。
+
+---
+
+# 5. 首次启动基础检查
+
+登录日常用户后：
+
+```bash
+lsblk -f
+df -h
+swapon --show
+```
+
+确认有：
 
 ```text
 /
-├── home/你的日常用户
-└── srv/
-    ├── ai/
-    │   ├── projects/
-    │   ├── models/
-    │   ├── datasets/
-    │   ├── cache/
-    │   │   ├── huggingface/
-    │   │   ├── torch/
-    │   │   ├── uv/
-    │   │   └── npm/
-    │   └── secrets/
-    └── docker/
+/home
+/srv/ai
+/boot/efi
+swap
 ```
 
-如果是新装系统：
-
-|分区|建议大小|
-|---|--:|
-|`/`|150–200GB|
-|`/srv` 或 `/srv/ai`|700GB+|
-|swap|32–64GB|
-|EFI|默认即可|
-b
-如果已装好系统，不必重装，直接创建目录：
-
-```bash
-sudo mkdir -p /srv/ai/{projects,models,datasets,cache/{huggingface,torch,uv,pip,npm},secrets}
-sudo mkdir -p /srv/docker
-```
-
----
-
-## 3. 宿主机基础包
+然后更新系统：
 
 ```bash
 sudo apt update
 sudo apt full-upgrade -y
-
-sudo apt install -y \
-  build-essential git curl wget unzip jq \
-  ripgrep fd-find tree tmux htop btop nvtop \
-  ca-certificates gnupg lsb-release \
-  python3 python3-venv python3-pip pipx direnv \
-  openssh-client rsync
+sudo reboot
 ```
-
-不要在宿主机上做这些事：
-
-```bash
-sudo pip install ...
-sudo npm install -g 一堆东西
-sudo conda install ...
-```
-
-宿主机保持干净。
 
 ---
 
-## 4. NVIDIA 驱动与 CUDA
+# 6. 安装基础工具
 
-### 4.1 安装驱动
+重启后执行：
 
-优先用 Ubuntu 仓库，不建议直接用 NVIDIA `.run` 安装器。NVIDIA Container Toolkit 文档也建议优先使用发行版包管理器安装驱动。([NVIDIA Docs](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html "Installing the NVIDIA Container Toolkit — NVIDIA Container Toolkit"))
+```bash
+sudo apt update
+
+sudo apt install -y \
+  build-essential git curl wget unzip jq \
+  ca-certificates gnupg lsb-release \
+  htop btop nvtop tmux tree ripgrep fd-find \
+  python3 python3-venv python3-pip pipx direnv \
+  openssh-client rsync \
+  linux-headers-$(uname -r)
+```
+
+这里 **宿主机保留系统 Python** 是对的。  
+但规则是：
+
+```text
+可以安装 python3 / python3-venv / python3-pip
+不要 sudo pip install
+不要把 torch / transformers / langchain 装到系统 Python
+```
+
+---
+
+# 7. 安装 NVIDIA 驱动
+
+先查看推荐驱动：
 
 ```bash
 ubuntu-drivers devices
+```
+
+安装推荐驱动：
+
+```bash
 sudo ubuntu-drivers install
 sudo reboot
 ```
@@ -115,84 +241,70 @@ sudo reboot
 nvidia-smi
 ```
 
-你需要看到：
+你应该看到 RTX 5060。
 
-```text
-NVIDIA GeForce RTX 5060
-Driver Version: ...
-CUDA Version: ...
-```
-
-Ollama 官方硬件页已列出 RTX 5060 / 5060 Ti 属于 compute capability 12.0，并要求 NVIDIA driver 531+；CUDA 12.8 release notes 也说明已加入 Blackwell `SM_120` 编译支持。([Ollama 文档](https://docs.ollama.com/gpu "Hardware support - Ollama"))
-
-### 4.2 是否安装 CUDA Toolkit？
-
-**最佳实践：**
-
-- 只跑 PyTorch / Ollama / llama.cpp Docker：宿主机通常只需要 NVIDIA 驱动。
-    
-- 需要自己编译 CUDA extension、llama.cpp CUDA、custom kernel：再装 CUDA Toolkit。
-    
-
-Ubuntu 26.04 已把 CUDA 纳入仓库，但安装前先看包名：
-
-```bash
-apt-cache search '^cuda-toolkit'
-apt-cache policy cuda-toolkit cuda-toolkit-13
-```
-
-然后安装：
-
-```bash
-sudo apt install -y cuda-toolkit-13
-nvcc --version
-```
-
-NVIDIA CUDA 13.2 文档仍强调 CUDA 需要 CUDA-capable GPU、受支持 Linux、gcc/toolchain 和 CUDA Toolkit；不要混装多个来源的 CUDA 包。([NVIDIA Docs](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/ "CUDA Installation Guide for Linux — Installation Guide for Linux 13.2 documentation"))
+此时先不要急着装完整 CUDA Toolkit。NVIDIA 官方 CUDA Linux 安装指南推荐优先使用包管理器安装方式；对你的用途，宿主机先有驱动即可，PyTorch/Ollama/vLLM 多数运行时依赖可以放在 venv 或容器里。([NVIDIA Docs](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/?utm_source=chatgpt.com "CUDA Installation Guide for Linux"))
 
 ---
 
-## 5. 单独创建 AI 用户
+# 8. 创建 AI 隔离用户和目录
 
-建议日常桌面用户不要直接进 `docker` 组。创建单独 `ai` 用户：
+创建 `ai` 用户：
 
 ```bash
 sudo adduser ai
 sudo usermod -aG video,render ai
+```
+
+准备目录：
+
+```bash
+sudo mkdir -p /srv/ai/{projects,models,datasets,compose,secrets}
+sudo mkdir -p /srv/ai/cache/{huggingface,torch,uv,pip,npm,ollama}
+sudo mkdir -p /srv/docker
+
 sudo chown -R ai:ai /srv/ai
 ```
 
-稍后 Docker 装好后，只把 `ai` 加入 docker 组：
+目录结构：
 
-```bash
-sudo usermod -aG docker ai
+```text
+/srv/ai/
+├── projects        # 代码项目
+├── models          # 模型文件
+├── datasets        # 数据集、向量库、数据库
+├── compose         # Docker Compose 配置
+├── secrets         # 本地密钥
+└── cache
+    ├── huggingface
+    ├── torch
+    ├── uv
+    ├── pip
+    ├── npm
+    └── ollama
 ```
-
-原因：Docker 官方文档明确说明，`docker` 组具有接近 root 的权限。([Docker Documentation](https://docs.docker.com/engine/install/linux-postinstall/ "Linux post-installation steps for Docker Engine | Docker Docs"))
-
-之后用：
-
-```bash
-su - ai
-```
-
-或者 SSH 到本机 `ai` 用户跑 agent / LLM 服务。
 
 ---
 
-## 6. Docker Engine 安装
+# 9. 安装 Docker Engine
 
-不要装 Docker Desktop。工作站用 Docker Engine 更干净。
+不要装 Docker Desktop。  
+使用 Docker 官方 apt 源安装 Docker Engine。Docker 官方 Ubuntu 安装文档推荐安装 `docker-ce`、`docker-ce-cli`、`containerd.io`、`docker-buildx-plugin` 和 `docker-compose-plugin`。([Docker Documentation](https://docs.docker.com/engine/install/ubuntu/?utm_source=chatgpt.com "Install Docker Engine on Ubuntu"))
+
+## 9.1 卸载可能冲突的旧包
 
 ```bash
-# 移除冲突包
 for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do
   sudo apt remove -y $pkg
 done
+```
 
-# Docker 官方 apt 源
+## 9.2 添加 Docker 官方源
+
+```bash
 sudo apt update
 sudo apt install -y ca-certificates curl
+
 sudo install -m 0755 -d /etc/apt/keyrings
 
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
@@ -210,14 +322,46 @@ Signed-By: /etc/apt/keyrings/docker.asc
 EOF
 
 sudo apt update
-sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-Docker 官方文档推荐通过 apt repository 安装 Docker Engine，并安装 `docker-ce`、CLI、containerd、buildx、compose plugin。([Docker Documentation](https://docs.docker.com/engine/install/ubuntu/ "Install Docker Engine on Ubuntu | Docker Docs"))
-
-配置 Docker 数据目录和日志轮转：
+## 9.3 安装 Docker
 
 ```bash
+sudo apt install -y \
+  docker-ce \
+  docker-ce-cli \
+  containerd.io \
+  docker-buildx-plugin \
+  docker-compose-plugin
+```
+
+测试：
+
+```bash
+sudo docker run hello-world
+```
+
+---
+
+# 10. 把 Docker 数据目录移到 `/srv/docker`
+
+默认 Docker 会放在：
+
+```text
+/var/lib/docker
+```
+
+这会占用 `/` 分区。你应该改到：
+
+```text
+/srv/docker
+```
+
+执行：
+
+```bash
+sudo systemctl stop docker
+
 sudo mkdir -p /srv/docker
 
 sudo tee /etc/docker/daemon.json > /dev/null <<'JSON'
@@ -234,31 +378,45 @@ sudo tee /etc/docker/daemon.json > /dev/null <<'JSON'
 }
 JSON
 
-sudo systemctl restart docker
+sudo systemctl start docker
 ```
 
-把 `ai` 用户加入 docker 组：
+检查：
+
+```bash
+docker info | grep "Docker Root Dir"
+```
+
+应该看到：
+
+```text
+Docker Root Dir: /srv/docker
+```
+
+只把 `ai` 用户加入 Docker 组：
 
 ```bash
 sudo usermod -aG docker ai
 ```
 
+Docker 官方文档说明，`docker` 组拥有接近 root 的权限，所以不要随便把日常用户也加入 docker 组。([Docker Documentation](https://docs.docker.com/engine/install/linux-postinstall/?utm_source=chatgpt.com "Linux post-installation steps for Docker Engine"))
+
 重新登录 `ai` 用户后测试：
 
 ```bash
+su - ai
 docker run hello-world
 ```
 
 ---
 
-## 7. NVIDIA Container Toolkit
+# 11. 安装 NVIDIA Container Toolkit
 
-安装：
+Docker 装好后，再装 NVIDIA Container Toolkit。NVIDIA 官方文档说明，Docker 需要通过 `nvidia-ctk runtime configure --runtime=docker` 配置后，容器才能使用 NVIDIA Container Runtime。([NVIDIA Docs](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html?utm_source=chatgpt.com "Installing the NVIDIA Container Toolkit"))
+
+切回有 sudo 权限的日常用户，执行：
 
 ```bash
-sudo apt-get update
-sudo apt-get install -y --no-install-recommends ca-certificates curl gnupg2
-
 curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey \
   | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg
 
@@ -266,8 +424,8 @@ curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-contai
   | sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' \
   | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
 
-sudo apt-get update
-sudo apt-get install -y nvidia-container-toolkit
+sudo apt update
+sudo apt install -y nvidia-container-toolkit
 ```
 
 配置 Docker runtime：
@@ -277,196 +435,116 @@ sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
 ```
 
-NVIDIA 官方文档说明 `nvidia-ctk runtime configure --runtime=docker` 会修改 `/etc/docker/daemon.json`，让 Docker 使用 NVIDIA Container Runtime。([NVIDIA Docs](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html "Installing the NVIDIA Container Toolkit — NVIDIA Container Toolkit"))
-
 测试 GPU 容器：
 
 ```bash
-docker run --rm --runtime=nvidia --gpus all ubuntu nvidia-smi
+docker run --rm --gpus all ubuntu nvidia-smi
 ```
 
-这是 NVIDIA 官方 sample workload。([NVIDIA Docs](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/sample-workload.html "Running a Sample Workload — NVIDIA Container Toolkit"))
+如果容器里能看到 RTX 5060，GPU 容器环境完成。
 
 ---
 
-## 8. Python / PyTorch 环境策略
+# 12. 安装 mise
 
-### 推荐策略
-
-|场景|做法|
-|---|---|
-|快速实验|`uv` + `.venv`|
-|PyTorch / CUDA 项目|Docker 或独立 `.venv`|
-|vLLM / SGLang|独立容器或全新 `.venv`|
-|Agent 项目|每个 repo 单独环境|
-|长期服务|Docker Compose|
-
-PyTorch 当前官方安装页显示 stable 版本要求 Python 3.10+，并提供 CUDA 11.8 / 12.6 / 12.8 wheel 选项；RTX 50 系列建议优先 CUDA 12.8+ 路径。([PyTorch](https://pytorch.org/ "PyTorch"))
-
-示例：裸机项目环境
+从这里开始都在 `ai` 用户下做。
 
 ```bash
-cd /srv/ai/projects
-mkdir torch-test && cd torch-test
-
-python3 -m venv .venv
-source .venv/bin/activate
-
-pip install --upgrade pip
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
-
-python - <<'PY'
-import torch
-print(torch.__version__)
-print(torch.cuda.is_available())
-print(torch.cuda.get_device_name(0))
-PY
+su - ai
 ```
 
-更推荐用 `uv`：
+安装 mise：
 
 ```bash
-pipx install uv
-
-cd /srv/ai/projects
-mkdir my-ai-project && cd my-ai-project
-
-uv venv --python 3.12
-source .venv/bin/activate
-uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+curl https://mise.run | sh
 ```
+
+启用 bash：
+
+```bash
+echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+检查：
+
+```bash
+mise doctor
+mise --version
+```
+
+mise 官方定位是把项目工具、环境变量和任务统一放进 `mise.toml`；它也支持从 npm、pipx、core、aqua、GitHub 等后端安装工具。([GitHub](https://github.com/jdx/mise?utm_source=chatgpt.com "jdx/mise: dev tools, env vars, task runner"))
 
 ---
 
-## 9. 本地 LLM：按用途选工具
+# 13. 用 mise 安装开发工具
 
-### 9.1 Ollama：最省事
-
-适合：
-
-- 本地聊天
-    
-- OpenAI-compatible 简单服务
-    
-- 量化模型
-    
-- agent 调用本地小模型
-    
+在 `ai` 用户下：
 
 ```bash
-docker run -d \
-  --gpus=all \
-  -v /srv/ai/models/ollama:/root/.ollama \
-  -p 11434:11434 \
-  --name ollama \
-  ollama/ollama
+mise use --global python@3.12
+mise use --global node@22
+mise use --global uv@latest
+mise use --global pnpm@latest
+mise use --global go@latest
+mise use --global rust@latest
 ```
 
-Ollama 官方 Docker 文档给出的 NVIDIA GPU 启动方式就是 `--gpus=all` 并挂载模型卷。([Ollama 文档](https://docs.ollama.com/docker "Docker - Ollama"))
-
-进入容器测试：
+检查：
 
 ```bash
-docker exec -it ollama ollama run llama3.2
+python --version
+node --version
+uv --version
+pnpm --version
+go version
+rustc --version
 ```
 
-8GB 显存建议优先：
+你的工具分工：
 
 ```text
-4B / 7B / 8B Q4
-embedding 模型
-reranker 小模型
+mise   管工具版本
+uv     管 Python 项目依赖
+Docker 管长期服务和隔离环境
 ```
 
-不要优先追 14B/32B。14B Q4 可能需要 CPU offload，延迟明显增加。
+uv 官方定位是快速 Python 包和项目管理器，可替代常见的 pip、pip-tools、virtualenv 类工作流。([Astral Docs](https://docs.astral.sh/uv/?utm_source=chatgpt.com "uv"))
 
 ---
 
-### 9.2 llama.cpp：适合 GGUF 和极限省显存
-
-适合：
-
-- GGUF 模型
-    
-- CPU+GPU 混合推理
-    
-- 低显存机器
-    
-- 本地 API server
-    
-
-llama.cpp 官方说明支持 Docker、GGUF、CUDA kernels、1.5-bit 到 8-bit 量化，并支持 CPU+GPU hybrid inference。([GitHub](https://github.com/ggml-org/llama.cpp "GitHub - ggml-org/llama.cpp: LLM inference in C/C++ · GitHub"))
-
-建议目录：
+# 14. 配置 `ai` 用户环境变量
 
 ```bash
-/srv/ai/models/gguf
-/srv/ai/projects/llama.cpp
-```
+cat >> ~/.bashrc <<'EOF'
 
-如果自己编译：
+# AI workstation paths
+export HF_HOME=/srv/ai/cache/huggingface
+export TRANSFORMERS_CACHE=/srv/ai/cache/huggingface
+export TORCH_HOME=/srv/ai/cache/torch
+export UV_CACHE_DIR=/srv/ai/cache/uv
+export PIP_CACHE_DIR=/srv/ai/cache/pip
+export NPM_CONFIG_CACHE=/srv/ai/cache/npm
 
-```bash
-cd /srv/ai/projects
-git clone https://github.com/ggml-org/llama.cpp
-cd llama.cpp
+# Ollama
+export OLLAMA_HOST=127.0.0.1:11434
+EOF
 
-cmake -B build -DGGML_CUDA=ON
-cmake --build build --config Release -j$(nproc)
-```
-
-运行示例：
-
-```bash
-./build/bin/llama-server \
-  -m /srv/ai/models/gguf/model-q4.gguf \
-  --host 0.0.0.0 \
-  --port 8080 \
-  -ngl 99
+source ~/.bashrc
 ```
 
 ---
 
-### 9.3 vLLM：只在你需要服务化/吞吐时用
-
-vLLM 对 8GB 显存不算友好，适合小模型或实验 OpenAI-compatible server。官方文档写明 vLLM 要求 Linux、Python 3.10–3.13，NVIDIA CUDA GPU compute capability 7.5+，并且当前预编译 CUDA 二进制基于 CUDA 12.9。([vLLM](https://docs.vllm.ai/en/latest/getting_started/installation/gpu/ "GPU - vLLM"))
-
-建议只给 vLLM 一个独立环境：
-
-```bash
-mkdir -p /srv/ai/projects/vllm-test
-cd /srv/ai/projects/vllm-test
-
-uv venv --python 3.12
-source .venv/bin/activate
-
-uv pip install vllm --torch-backend=auto
-```
-
-或 Docker：
-
-```bash
-docker run --runtime nvidia --gpus all \
-  -v /srv/ai/cache/huggingface:/root/.cache/huggingface \
-  -p 8000:8000 \
-  --ipc=host \
-  vllm/vllm-openai:latest \
-  --model Qwen/Qwen3-0.6B
-```
-
----
-
-## 10. 推荐 Docker Compose：AI 基础服务
+# 15. Docker Compose：AI 基础服务
 
 创建：
 
 ```bash
-mkdir -p /srv/ai/compose
 cd /srv/ai/compose
 nano compose.yml
 ```
 
-内容：
+写入：
 
 ```yaml
 services:
@@ -479,6 +557,19 @@ services:
       - "11434:11434"
     volumes:
       - /srv/ai/models/ollama:/root/.ollama
+
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
+    restart: unless-stopped
+    ports:
+      - "3000:8080"
+    environment:
+      OLLAMA_BASE_URL: http://ollama:11434
+    volumes:
+      - /srv/ai/datasets/open-webui:/app/backend/data
+    depends_on:
+      - ollama
 
   qdrant:
     image: qdrant/qdrant:latest
@@ -495,7 +586,7 @@ services:
     restart: unless-stopped
     environment:
       POSTGRES_USER: ai
-      POSTGRES_PASSWORD: change_me
+      POSTGRES_PASSWORD: change_this_password
       POSTGRES_DB: ai
     ports:
       - "5432:5432"
@@ -507,122 +598,259 @@ services:
 
 ```bash
 docker compose up -d
+docker compose ps
 ```
 
-查看：
+Ollama 官方 Docker 文档给出的 NVIDIA GPU 方式是 `--gpus=all`，并挂载模型目录到 `/root/.ollama`；上面的 compose 就是这个思路。([Ollama 文档](https://docs.ollama.com/docker?utm_source=chatgpt.com "Docker"))
+
+测试 Ollama：
 
 ```bash
-docker compose ps
-docker logs -f ollama
+docker exec -it ollama ollama run qwen2.5:3b
+```
+
+或者：
+
+```bash
+docker exec -it ollama ollama run llama3.2
+```
+
+浏览器打开：
+
+```text
+http://localhost:3000
+```
+
+RTX 5060 8GB 建议模型级别：
+
+```text
+3B / 4B：体验较好
+7B / 8B Q4：可用
+14B Q4：可能需要 CPU offload，速度下降
+32B / 70B：不建议作为本地主力
 ```
 
 ---
 
-## 11. Agent 隔离最佳实践
+# 16. Python + PyTorch 项目模板
 
-你这台机器适合做 **本地 agent workstation**，但不要让 agent 直接拥有你的整个主目录。
+创建测试项目：
 
-### 推荐目录结构
-
-```text
-/srv/ai/projects/
-├── repo-a/
-├── repo-b/
-└── sandbox/
+```bash
+cd /srv/ai/projects
+mkdir torch-test
+cd torch-test
 ```
 
-### Agent 运行规则
+初始化：
 
-|项目|建议|
-|---|---|
-|代码目录|只挂载当前 repo|
-|SSH key|不默认挂载|
-|GitHub token|用 `.env` 注入，不写进镜像|
-|Docker socket|不给 agent 挂 `/var/run/docker.sock`，除非你明确需要|
-|网络|高风险任务用 `--network none`|
-|权限|容器内用非 root 用户|
-|日志|每个 agent 单独 logs 目录|
+```bash
+uv init .
+```
 
-示例：
+创建 `mise.toml`：
+
+```bash
+nano mise.toml
+```
+
+内容：
+
+```toml
+[tools]
+python = "3.12"
+uv = "latest"
+node = "22"
+pnpm = "latest"
+
+[env]
+HF_HOME = "/srv/ai/cache/huggingface"
+TRANSFORMERS_CACHE = "/srv/ai/cache/huggingface"
+TORCH_HOME = "/srv/ai/cache/torch"
+UV_CACHE_DIR = "/srv/ai/cache/uv"
+PIP_CACHE_DIR = "/srv/ai/cache/pip"
+NPM_CONFIG_CACHE = "/srv/ai/cache/npm"
+
+[tasks.install]
+description = "Install Python dependencies"
+run = "uv sync"
+
+[tasks.add-torch]
+description = "Install PyTorch CUDA wheel"
+run = "uv add torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128"
+
+[tasks.check-cuda]
+description = "Check PyTorch CUDA"
+run = '''
+uv run python - <<'PY'
+import torch
+print("torch:", torch.__version__)
+print("cuda available:", torch.cuda.is_available())
+if torch.cuda.is_available():
+    print("gpu:", torch.cuda.get_device_name(0))
+PY
+'''
+
+[tasks.run]
+description = "Run main app"
+run = "uv run python main.py"
+
+[tasks.test]
+description = "Run tests"
+run = "uv run pytest"
+
+[tasks.fmt]
+description = "Format"
+run = "uv run ruff format ."
+
+[tasks.lint]
+description = "Lint"
+run = "uv run ruff check ."
+```
+
+信任项目：
+
+```bash
+mise trust
+mise install
+```
+
+安装 PyTorch：
+
+```bash
+mise run add-torch
+```
+
+检查 CUDA：
+
+```bash
+mise run check-cuda
+```
+
+PyTorch 官方安装页会按系统、包管理器和 CUDA 版本生成安装命令；你这里优先用 CUDA 12.8 wheel 路径。([PyTorch](https://pytorch.org/get-started/locally/?utm_source=chatgpt.com "Get Started"))
+
+---
+
+# 17. Agent 项目隔离模板
+
+以后每个 agent 项目都放在：
+
+```text
+/srv/ai/projects/project-name
+```
+
+不要让 agent 直接访问：
+
+```text
+/home
+~/.ssh
+/srv/ai/secrets
+/var/run/docker.sock
+```
+
+安全运行一个 Node/Python 沙箱示例：
 
 ```bash
 docker run --rm -it \
-  --name ai-agent-repo-a \
-  -v /srv/ai/projects/repo-a:/workspace \
+  --name agent-sandbox \
+  -v /srv/ai/projects/project-name:/workspace \
   -w /workspace \
   --network bridge \
   node:22-bookworm \
   bash
 ```
 
-如果要跑 Codex/OpenCode 类工具，可以在容器内装 Node/Python 工具链，避免污染宿主机。
-
----
-
-## 12. 性能设置
-
-### 12.1 NVIDIA 持久模式
-
-桌面卡不一定总需要，但可以测试：
+更严格，不给网络：
 
 ```bash
-sudo nvidia-smi -pm 1
+docker run --rm -it \
+  --name agent-sandbox-nonet \
+  -v /srv/ai/projects/project-name:/workspace \
+  -w /workspace \
+  --network none \
+  node:22-bookworm \
+  bash
 ```
 
-查看功耗和温度：
-
-```bash
-watch -n 1 nvidia-smi
-nvtop
-```
-
-### 12.2 防止爆显存
-
-常见策略：
+原则：
 
 ```text
-优先 Q4_K_M / Q4 量化
-减少 context length
-减少 batch size
-不要同时跑多个大模型
-embedding 和 chat 模型分开跑
-用 CPU offload 作为兜底，不作为主力
-```
-
-### 12.3 32GB 内存建议
-
-32GB 对 agent + Docker + 浏览器 + IDE + LLM 已经会紧张。建议加 swap：
-
-```bash
-sudo fallocate -l 64G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-
-echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+普通 coding agent：只挂当前 repo
+需要联网安装依赖：临时开 network bridge
+高风险执行：--network none
+不要挂 Docker socket
+不要挂 SSH key
+API key 用 .env，本地 chmod 600
 ```
 
 ---
 
-## 13. 备份与恢复
+# 18. 可选：安装 CUDA Toolkit
 
-最低限度：
+默认不装完整 CUDA Toolkit。  
+只有这些场景才装：
 
-```bash
-/srv/ai/projects     必备份
-/srv/ai/secrets      必备份，加密
-/srv/ai/compose      必备份
-/srv/ai/models       可选，模型可重下
-/srv/docker          不建议直接备份
+```text
+需要 nvcc
+需要编译 CUDA extension
+需要自己编译 llama.cpp CUDA
+需要开发 CUDA kernel
 ```
 
-推荐：
+Ubuntu 26.04 官方说明 CUDA Toolkit 已在 Ubuntu Archives 中可用；Canonical 也把 26.04 的 AI/ML 工具链支持作为发布重点之一。([Ubuntu 文档](https://documentation.ubuntu.com/release-notes/26.04/summary-for-lts-users/?utm_source=chatgpt.com "Ubuntu 26.04 LTS summary"))
+
+检查包：
+
+```bash
+apt-cache search '^cuda-toolkit'
+apt-cache policy cuda-toolkit
+```
+
+安装：
+
+```bash
+sudo apt install -y cuda-toolkit
+```
+
+检查：
+
+```bash
+nvcc --version
+```
+
+---
+
+# 19. 备份策略
+
+必须备份：
+
+```text
+/srv/ai/projects
+/srv/ai/compose
+/srv/ai/secrets
+/home/你的用户/.ssh
+```
+
+可选备份：
+
+```text
+/srv/ai/models
+/srv/ai/datasets
+```
+
+不建议直接备份：
+
+```text
+/srv/docker
+```
+
+安装 restic：
 
 ```bash
 sudo apt install -y restic
 ```
 
-备份到外接硬盘或 NAS：
+示例：
 
 ```bash
 restic init --repo /media/backup/ai-restic
@@ -635,53 +863,155 @@ restic -r /media/backup/ai-restic backup \
 
 ---
 
-## 14. 不建议做的事
+# 20. 日常维护命令
 
-```text
-不要把所有 AI 包装到宿主机 Python
-不要 sudo pip install
-不要混用 NVIDIA .run、Ubuntu 驱动、第三方 PPA
-不要把 daily user 加入 docker 组
-不要让 agent 直接访问整个 /home
-不要把 API key 写进 Dockerfile 或 git repo
-不要期待 8GB 显存流畅跑 32B/70B
-不要把 Docker 数据留在默认 /var/lib/docker 直到根分区爆掉
+系统更新：
+
+```bash
+sudo apt update
+sudo apt full-upgrade -y
+```
+
+Docker 清理：
+
+```bash
+docker system df
+docker image prune
+docker builder prune
+```
+
+不要随便执行：
+
+```bash
+docker system prune -a --volumes
+```
+
+这会删掉很多缓存和未使用卷。
+
+查看 GPU：
+
+```bash
+nvidia-smi
+nvtop
+```
+
+查看服务：
+
+```bash
+cd /srv/ai/compose
+docker compose ps
+docker compose logs -f ollama
+```
+
+更新 mise 工具：
+
+```bash
+mise upgrade
+mise list
+```
+
+更新 uv 项目依赖：
+
+```bash
+cd /srv/ai/projects/某项目
+uv sync
+uv lock --upgrade
 ```
 
 ---
 
-## 15. 最终推荐安装顺序
+# 21. 最终验收清单
 
-```text
-1. BIOS 设置
-2. Ubuntu 26.04 更新
-3. NVIDIA 驱动：ubuntu-drivers install
-4. nvidia-smi 验证
-5. 创建 /srv/ai 和 ai 用户
-6. 安装 Docker Engine
-7. Docker data-root 指到 /srv/docker
-8. 安装 NVIDIA Container Toolkit
-9. docker --gpus all 验证
-10. 安装 Ollama / llama.cpp / vLLM
-11. 每个项目使用 Docker 或 uv venv
-12. 配置备份
+全部做完后，逐条检查：
+
+```bash
+lsblk -f
+df -h
+swapon --show
+nvidia-smi
+docker info | grep "Docker Root Dir"
+docker run --rm --gpus all ubuntu nvidia-smi
 ```
 
-你的机器建议定位为：
+切到 `ai` 用户：
 
-```text
-本地 AI agent 开发工作站
-+ 7B/8B 量化模型推理
-+ RAG / embedding / rerank
-+ 小规模 LoRA / PyTorch 实验
-+ Docker 化工具链
+```bash
+su - ai
+mise doctor
+python --version
+node --version
+uv --version
+docker run hello-world
 ```
 
-不建议定位为：
+检查 AI 服务：
+
+```bash
+cd /srv/ai/compose
+docker compose ps
+docker exec -it ollama ollama list
+```
+
+浏览器检查：
 
 ```text
-大模型训练机
-70B 本地推理机
-多用户 GPU server
-高吞吐生产推理节点
+http://localhost:3000
 ```
+
+---
+
+# 22. 最终安装顺序总表
+
+按这个顺序执行：
+
+```text
+1. 制作 Ubuntu 26.04 Desktop 启动盘
+2. BIOS 设置：
+   UEFI Only
+   Secure Boot Disabled
+   Resizable BAR Enabled
+   Above 4G Decoding Enabled
+   VT-x / VT-d Enabled
+   XMP Enabled
+
+3. 手动分区：
+   /boot/efi   1GB
+   /           150GB
+   swap        64GB
+   /home       120GB
+   /srv/ai     剩余全部
+
+4. 安装 Ubuntu
+5. 首次启动后 apt full-upgrade
+6. 安装基础工具包
+7. 安装 NVIDIA 驱动
+8. nvidia-smi 验证
+9. 创建 ai 用户
+10. 创建 /srv/ai 和 /srv/docker
+11. 安装 Docker Engine
+12. Docker data-root 改到 /srv/docker
+13. ai 用户加入 docker 组
+14. 安装 NVIDIA Container Toolkit
+15. docker --gpus all 验证
+16. ai 用户安装 mise
+17. mise 安装 python/node/uv/pnpm/go/rust
+18. 配置 AI 缓存路径
+19. Docker Compose 启动 Ollama / Open WebUI / Qdrant / pgvector
+20. Python 项目用 mise.toml + uv
+21. agent 只挂载单项目目录
+22. 配置备份
+```
+
+你的最佳体验组合就是：
+
+```text
+Ubuntu 26.04 + NVIDIA Driver
+Docker + NVIDIA Container Toolkit
+mise + uv
+/srv/ai 独立数据区
+Ollama + Open WebUI + Qdrant + pgvector
+每个项目独立 mise.toml + uv.lock
+agent 容器隔离运行
+```
+
+这套结构比较稳，后面要卸载、迁移、重装、扩展都不会太痛苦。
