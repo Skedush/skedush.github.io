@@ -1,3 +1,8 @@
+> [!NOTE]
+> Deployment was switched to Vercel on 2026-06-29.
+> Use `.github/workflows/deploy.yml` together with `vercel.json`.
+> The older GitHub Pages and rsync server deployment steps below are historical and should not be used for new deploys.
+
 - [Obsidian - Sharpen your thinking](https://obsidian.md/)
 - [Welcome to Quartz 4](https://quartz.jzhao.xyz/)
 - [GitHub: Let’s build from here · GitHub](https://github.com/)
