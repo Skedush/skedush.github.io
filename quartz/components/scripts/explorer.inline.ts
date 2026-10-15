@@ -130,3 +130,6 @@ function toggleCollapsedByPath(array: FolderState[], path: string) {
     entry.collapsed = !entry.collapsed
   }
 }
+
+// Quartz replaces this module with the bundled browser script during builds.
+export default ""

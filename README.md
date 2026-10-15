@@ -1,3 +1,14 @@
+# AXMORF · 长期思考
+
+本站是 AXMORF · 易狸的长期思考博客，生产地址为 <https://blog.zzzxc.com/>。
+Tagline：Change until the axioms morph. 持续改变，直到公理随之重塑。
+
+本次品牌发布统一首页、站点元信息、署名与主站入口，并修复 Explorer 内联脚本的模块类型声明；保留原有笔记与布局。用户已批准最终核验后合并既有 PR36 并部署。正常发布路径是 `main` push → `.github/workflows/deploy.yml` → 现有 Vercel 项目；实际合并 SHA 与部署结果以该次运行和线上回读为准。
+
+验证命令为 `npx tsc --noEmit`、`npm test` 与 `npx quartz build`。全仓 `npm run check` 仍包含既有格式问题，本轮不批量格式化或修改保护规则；原上游 `v4` CI 不构成本仓库 `main` 的格式门禁。未发布 npm 包，也不恢复下方历史 GitHub Pages 部署步骤。
+
+## 历史搭建记录
+
 > [!NOTE]
 > Deployment was switched to Vercel on 2026-06-29.
 > Use `.github/workflows/deploy.yml` together with `vercel.json`.
