@@ -1,6 +1,15 @@
 ---
-title: 认知因果造化现象纯粹
+title: AXMORF · 长期思考
+description: AXMORF，面向 AI 应用的独立构建者，与 Agent 一起把想法做成可运行、可验证的作品。
 ---
+
+## 认知因果造化现象纯粹
+
+by AXMORF · [主站](https://zzzxc.com/)
+
+Change until the axioms morph.
+
+持续改变，直到公理随之重塑。
 
 > 夜曲-周杰伦.mp3
 ![[周杰伦 - 夜曲.mp3]]

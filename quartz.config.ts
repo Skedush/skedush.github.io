@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { brand } from "./quartz/brand"
 
 /**
  * Quartz 4.0 Configuration
@@ -8,13 +9,13 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "💃 Lii's Blog",
+    pageTitle: brand.title,
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
-    baseUrl: "zzzxc.com",
+    baseUrl: "blog.zzzxc.com",
     locale: "en-US",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "modified",
